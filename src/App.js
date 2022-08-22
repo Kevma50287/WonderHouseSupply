@@ -2,6 +2,7 @@ import './App.css';
 import Header from './Components/Header';
 import Main from './Components/Main';
 import Footer from './Components/Footer';
+import AdminForm from './Features/AdminForm';
 
 const itemURL = 'http://localhost:3001/items'
 const userURL = 'http://localhost:3002/users'
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <Main />
       <Footer />
+      <AdminForm/>
     </div>
   );
 }
