@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import ListItem from './ListItem'
 import { itemURL } from '../App'
+import { Grid } from '@mui/material'
+import { nanoid } from '@reduxjs/toolkit'
 
 export default function PopProdContainer() {
   const [itemData, setItemData] = useState([])
@@ -13,14 +15,21 @@ export default function PopProdContainer() {
 
   const arrayItems = itemData.map((item) => {
     return (
-      <ListItem item={item} key={item.id} />
+      <Grid key={nanoid()} container item xs={12} sm={6} md={3} alignItems='center'>
+        <ListItem item={item} key={item.id} />
+      </Grid>
     )
   })
 
   return (
-    <div>
-      <h3>Popular Products</h3>
-      {arrayItems}
+    <div className="margin10">
+      <Grid container rowSpacing={2}>
+        <Grid container item className='center' >
+          <Grid item className='main-section-title'>Popular Products</Grid>
+        </Grid>
+        {arrayItems}
+      </Grid>
+
     </div>
   )
 }
