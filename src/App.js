@@ -5,6 +5,7 @@ import Footer from './Components/Footer';
 
 const itemURL = 'http://localhost:3001/items'
 const userURL = 'http://localhost:3002/users'
+const reviewsURL = 'http://localhost:3003/reviews'
 
 function App() { 
   return (
@@ -16,5 +17,5 @@ function App() {
   );
 }
 
-export {itemURL, userURL}
+export {itemURL, userURL, reviewsURL}
 export default App;
