@@ -15,7 +15,7 @@ export default function PopProdContainer() {
 
   const arrayItems = itemData.map((item) => {
     return (
-      <Grid key={nanoid()} container item xs={12} sm={6} md={3} alignItems='center'>
+      <Grid key={nanoid()} container item xs={12} sm={6} md={3} className='center'>
         <ListItem item={item} key={item.id} />
       </Grid>
     )
@@ -23,7 +23,7 @@ export default function PopProdContainer() {
 
   return (
     <div className="margin10">
-      <Grid container rowSpacing={2}>
+      <Grid container rowSpacing={1}>
         <Grid container item className='center' >
           <Grid item className='main-section-title'>Popular Products</Grid>
         </Grid>
