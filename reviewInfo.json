@@ -3,17 +3,20 @@
         {
             "id": 1,
             "username": "test123",
-            "review": "asdoiln wfobnsccsdlcn qdwociblsdk ascnlsdc wefoinsdc, sdflhsdpweowoei... Loramfu xissd loeask"
+            "review": "asdoiln wfobnsccsdlcn qdwociblsdk ascnlsdc wefoinsdc, sdflhsdpweowoei... Loramfu xissd loeask",
+            "rating":5
         },
         {
             "id": 2,
             "username": "mitch",
-            "review": "asdoil n wfobns ccsdlcn qdwoci blsdk ascn lsdc wefoinsdc, sdflhsdpweowoei... Loramfu xissd loeask"
+            "review": "asdoil n wfobns ccsdlcn qdwoci blsdk ascn lsdc wefoinsdc, sdflhsdpweowoei... Loramfu xissd loeask",
+            "rating":5
         },
         {
             "id": 3,
             "username": "flannery",
-            "review": "asdoi ln wfob nsa sda sddca sas  oei... Loram fu xis sd loeas k"
+            "review": "asdoi ln wfob nsa sda sddca sas  oei... Loram fu xis sd loeas k",
+            "rating":5
         }
     ]
 }
