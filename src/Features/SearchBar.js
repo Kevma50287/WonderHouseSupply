@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function SearchBar() {
   return (
-    <div>SearchBar</div>
+    <h1>SearchBar</h1>
   )
 }
