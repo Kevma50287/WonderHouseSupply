@@ -1,0 +1,14 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "username": "test123",
+        "password": "test123",
+        "userCategory": "admin",
+        "Cart": [{
+            "id": "247",
+            "numberOfItemsToBuy": "8"
+        }]
+      }
+    ]
+  }

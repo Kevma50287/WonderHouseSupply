@@ -1,0 +1,30 @@
+{
+    "items": [
+      {
+        "id": 247,
+        "name": "Door Hinge",
+        "placeText": "",
+        "price": "4.00",
+        "numberInStock": "21",
+        "description": "",
+        "specifications": "",
+        "howToUse": "",
+        "category": "",
+        "finish": "Stainless Steel",  
+        "relatedCategory":"", 
+        "type": "",
+        "brand": "",
+        "url": [
+            {
+                "id": "index 1",
+                "url": ""
+            },
+            {
+                "id": "index 2",
+                "url": ""
+            }
+            ]
+
+      }
+    ]
+  }
