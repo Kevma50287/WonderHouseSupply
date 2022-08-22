@@ -3,8 +3,7 @@
 WonderHouseSupply Inc. is a single-page-application bootstrapped with React.js, React Router, and MaterialUI. The site represents the front-end interface users will utilizes to navigate the site and purchase hardware supplies.
 
 ## FIGMA Wireframe
-
-Credits to Kelly Ma for the design of the wireframe
+https://www.figma.com/file/6eysvDjpPC476wvckgc57n/Untitled?node-id=0%3A1
 
 ## CRUD Operations Used
 
@@ -12,7 +11,16 @@ Application will utilize GET, PATCH, POST, and DELETE operations. The app will f
 
 ## React Routes
 
-The website will use React Router to navigate to the About Us section, to the Item Page section from the main page, and to the Cart checkout
+The website will use React Router to navigate to the Home page, About Us section, to the Item Page section from the main page, and to the Cart checkout
+
+## MVP + Stretch Goals
+
+The MVP for this project will consist of rendering the static front-end webpage, allow the user to navigate through the webpage by clicking on buttons and links, and the ability to add and remove items from the cart that will persist on the backend
+
+Our three stretch goals for the project consists of:
+1. Tracking the location of the user and returning the distance to the store
+2. Create a login/signup system to save the data of individual users
+3. When the admin is signed in (owner of the store) there will be an additional option on the webpage to add more items to the database (the adminForm)
 
 
 
