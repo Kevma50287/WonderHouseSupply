@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Grid } from "@mui/material";
 import { reviewsURL } from "../App";
+import { nanoid } from "@reduxjs/toolkit";
 
 const ReviewContainer = () => {
     const [reviewData, setReviewData] = useState([])
@@ -13,7 +14,7 @@ const ReviewContainer = () => {
 
     const arrayItems = reviewData.map((item) => {
         return (
-            <Grid item xs={12} sm={6} md={4}>
+            <Grid key={nanoid()} item xs={12} sm={6} md={4}>
                 <div className="review">
                     <div>{item.rating}</div>
                     <p>{item.review}</p>
@@ -25,7 +26,7 @@ const ReviewContainer = () => {
 
     return (
         <div className="margin10">
-            <Grid container rowSpacing={2}>
+            <Grid container rowSpacing={2} className="margin0">
                 <Grid container item className='center' >
                     <Grid item className='main-section-title'>Customer Reviews</Grid>
                 </Grid>
