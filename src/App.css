@@ -1,0 +1,51 @@
+/* .header {
+    width: 100%;
+    height: 140px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: #FCFCFC;
+} */
+
+
+.header-route {
+    margin-right: 50px;
+    color: #373F41;
+    font-family: 'Mulish';
+
+}
+
+.header-routes {
+    align-items: center;
+    margin: auto;
+    width: 50%;
+    display: flex;
+  }
+
+
+  /* .header{
+    position: relative;
+    padding-top:100px;
+    width: auto;
+    height: max-content;
+    margin: auto;
+    display: block;
+  }
+
+
+
+    .routes{
+    display: inline-block;
+    font-family: "Poppins";
+    font-size: 30px;
+    color: #373F41;
+} */
+
+.wonderLogo {
+    color: #A94747;
+    font-family: 'Mulish';
+    margin-right: 100px;
+
+}
