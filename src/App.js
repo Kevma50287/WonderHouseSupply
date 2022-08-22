@@ -3,7 +3,10 @@ import Header from './Components/Header';
 import Main from './Components/Main';
 import Footer from './Components/Footer';
 
-function App() {
+const itemURL = 'http://localhost:3001/items'
+const userURL = 'http://localhost:3002/users'
+
+function App() { 
   return (
     <div>
       <Header />
@@ -13,4 +16,5 @@ function App() {
   );
 }
 
+export {itemURL, userURL}
 export default App;
