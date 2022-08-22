@@ -1,3 +1,21 @@
+# Project Overview
+
+WonderHouseSupply Inc. is a single-page-application bootstrapped with React.js, React Router, and MaterialUI. The site represents the front-end interface users will utilizes to navigate the site and purchase hardware supplies.
+
+## FIGMA Wireframe
+
+Credits to Kelly Ma for the design of the wireframe
+
+## CRUD Operations Used
+
+Application will utilize GET, PATCH, POST, and DELETE operations. The app will fetch the data on the initial render to display elements onto the page. Users will be able to login and purchases items, which will be added to their cart. Cart items may be removed. This operation will be carried out through PATCH and DELETE. Finally, the site admin, aka owner of the store, can POST more items to the item database
+
+## React Routes
+
+The website will use React Router to navigate to the About Us section, to the Item Page section from the main page, and to the Cart checkout
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
