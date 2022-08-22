@@ -5,9 +5,17 @@ export default function Main() {
     return (
         <div>
             <h1>Main</h1>
-            <ListContainer props={category} />
+            {/* <ListContainer  props={category}/>
             <ListContainer props={product} />
-            <ListContainer props={review} />
+            <ListContainer  props={review} /> */}
         </div>
     )
 }
+
+
+
+
+
+
+
+
