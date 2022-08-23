@@ -1,5 +1,6 @@
 import React from 'react'
 import { Grid } from '@mui/material'
+import Cart from '../ProjectImajes/5 links center/Cart.png';
 
 export default function ListItem({ item }) {
   const { name, price, numberInStock, image } = item
@@ -11,6 +12,9 @@ export default function ListItem({ item }) {
       <p>${name}</p>
       <button className='button-style'>
         Learn More
+      </button>
+      <button className="header-button">
+         Add to card<img src={Cart}/>
       </button>
     </Grid>
   )

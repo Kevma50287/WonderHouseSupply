@@ -7,8 +7,16 @@
       "userCategory": "admin",
       "Cart": [
         {
-          "id": "247",
+          "id": "2",
           "numberOfItemsToBuy": "8"
+        },
+        {
+          "id": "4",
+          "numberOfItemsToBuy": "9"
+        },
+        {
+          "id": "5",
+          "numberOfItemsToBuy": "7"
         }
       ]
     },
@@ -16,8 +24,35 @@
       "username": "karl",
       "password": "123",
       "userCategory": "user",
-      "Cart": [],
+      "Cart": [
+        {
+          "id": "2",
+          "numberOfItemsToBuy": "8"
+        },
+        {
+          "id": "4",
+          "numberOfItemsToBuy": "9"
+        },
+        {
+          "id": "5",
+          "numberOfItemsToBuy": "7"
+        }
+      ],
       "id": 2
+    },
+    {
+      "username": "KARL",
+      "password": "4321",
+      "userCategory": "user",
+      "Cart": [],
+      "id": 3
+    },
+    {
+      "username": "kevin",
+      "password": "321",
+      "userCategory": "user",
+      "Cart": [],
+      "id": 4
     }
   ]
 }

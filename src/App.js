@@ -10,12 +10,24 @@ import ServicesRoute from './Features/ServicesRoute';
 import Cart from './Features/Cart';
 import LogIn from './Features/LogIn';
 import SignUp from './Features/SignUp';
+import React , { useState}  from 'react'
 
 const itemURL = 'http://localhost:3001/items'
 const userURL = 'http://localhost:3002/users'
 const reviewsURL = 'http://localhost:3003/reviews'
 
+
+
+
 function App() {
+
+
+  // data of our user
+const [userData, setUserData]=useState({})
+
+
+
+
   return (
     <div>
       <Header />
@@ -25,8 +37,8 @@ function App() {
         <Route path="/about" element={<AboutRoute/>}/>
         <Route path="/products"   element={<ProductsRoute/>}/>
         <Route  path="/services"  element={<ServicesRoute/>}/>
-        <Route path="/cart" element={<Cart/>}/>
-        <Route path="/logIn" element={<LogIn/>}/>
+        <Route path="/cart" element={<Cart userData={userData}/>}/>
+        <Route path="/logIn" element={<LogIn setUserData={setUserData}/>}/>
         <Route path="/signUp" element={<SignUp/>}/>
       </Routes>
       <Footer />

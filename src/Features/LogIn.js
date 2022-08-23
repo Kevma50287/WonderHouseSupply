@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { Link} from 'react-router-dom';
 
-export default function LogIn() {
+export default function LogIn({setUserData}) {
 
     // API of users data base
     let API = "http://localhost:3002/users"
 
 
     //state for user data 
-    const [userData, setUserData]=useState({})
+    
 
     //state of data from the users data base
 
@@ -58,7 +58,7 @@ export default function LogIn() {
             if (oneObj.username === userName) {
                 idUserName = oneObj.id;
             } else {
-                console.log('not match')
+                // console.log('not match')
             }
         })
 
@@ -67,7 +67,7 @@ export default function LogIn() {
             if (oneObj.password == password) {
                 idPassword = oneObj.id;
             } else {
-                console.log('not match')
+                // console.log('not match')
             }
         })
 
