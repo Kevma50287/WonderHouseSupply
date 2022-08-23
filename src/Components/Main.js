@@ -16,13 +16,12 @@ const theme = createTheme({
     }
 })
 
-export default function Main() {
+export default function Main({itemData}) {
     return (
         <div>
-            <h1>Main</h1>
             <ThemeProvider theme={theme}>
                 <CategoryContainer />
-                <PopProdContainer />
+                <PopProdContainer itemData={itemData} />
                 <ReviewContainer />
             </ThemeProvider>
         </div>

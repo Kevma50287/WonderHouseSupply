@@ -81,7 +81,7 @@ code {
   text-transform: uppercase;
   min-width: 64px;
   padding: 6px 16px;
-  border-width: 1px;
+  border: 1px solid var(--brand-color1);
   background-color: var(--secondary-color2);
   cursor: pointer;
   transition: all 250ms;
@@ -91,3 +91,29 @@ code {
   color: var(--secondary-color2);
   background-color: var(--brand-color1);
 }
+
+.itemdetail {
+  overflow: hidden;
+  height: 65px;
+}
+
+.itemname {
+  height: 65px;
+  overflow: hidden;
+  font-weight: 700;
+}
+
+.itemprice {
+  font-weight: bold;
+}
+
+.itemstock {
+  font-weight: bolder;
+  color: var(--brand-color1);
+}
+
+.header {
+  margin: 10px;
+}
+
+

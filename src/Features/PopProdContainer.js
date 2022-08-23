@@ -1,17 +1,9 @@
-import React, { useEffect, useState } from 'react'
 import ListItem from './ListItem'
-import { itemURL } from '../App'
 import { Grid } from '@mui/material'
 import { nanoid } from '@reduxjs/toolkit'
 
-export default function PopProdContainer() {
-  const [itemData, setItemData] = useState([])
+export default function PopProdContainer({itemData}) {
 
-  useEffect(() => {
-    fetch(itemURL)
-      .then(r => r.json())
-      .then(d => setItemData(d));
-  }, [])
 
   const arrayItems = itemData.map((item) => {
     return (
