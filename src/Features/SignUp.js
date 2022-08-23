@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function SignUp() {
 
@@ -21,8 +21,10 @@ export default function SignUp() {
 
     const handleChange = function (e) {
         let { name, value } = e.target
-        if (name === "password") { setPassword ((password) =>password = value) 
-            setNewUser({ ...newUser, [name]: value })}
+        if (name === "password") {
+            setPassword((password) => password = value)
+            setNewUser({ ...newUser, [name]: value })
+        }
         else { setNewUser({ ...newUser, [name]: value }) }
     }
 
@@ -32,7 +34,7 @@ export default function SignUp() {
 
     const handleChangeTwo = function (e) {
         // console.log(e.target.value)
-        setConfirmPassword((confirmPassword) =>confirmPassword = e.target.value)
+        setConfirmPassword((confirmPassword) => confirmPassword = e.target.value)
     }
 
 
@@ -73,7 +75,7 @@ export default function SignUp() {
                 <label className="infoLabel">USERNAME</label>
                 <input id="signupUsername" className="infoInput" type="text" name="username" onChange={handleChange} />
                 <label className="infoLabel">PASSWORD</label>
-                <input id="signupPass" className="infoInput" type="password" name="password" onChange={handleChange}  />
+                <input id="signupPass" className="infoInput" type="password" name="password" onChange={handleChange} />
                 <label className="infoLabel">CONFIRM PASSWORD</label>
                 <input id="signupConfirmPass" className="infoInput" type="password" name="confirmPassword" onChange={handleChangeTwo} />
                 <input id="submitCreate" type="submit" className="formClick" value="SIGN UP" />

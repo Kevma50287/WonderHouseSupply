@@ -126,9 +126,9 @@ code {
 }
 
 .sortRadio {
-  position:fixed;
-  top:52px;
-  left:0;
+  position: fixed;
+  top: 52px;
+  left: 0;
   font-size: 10px;
   background: white;
   width: 98vw;
@@ -139,6 +139,3 @@ code {
   position: fixed;
 
 }
-
-
-

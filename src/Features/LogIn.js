@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
+import { userURL } from '../App';
 
-export default function LogIn({setUserData, setLogedIn}) {
-
-
-    // API of users data base
-    let API = "http://localhost:3002/users"
-
+export default function LogIn({ setUserData, setLogedIn }) {
     //state for user data 
 
     //state of data from the users data base
@@ -14,7 +10,7 @@ export default function LogIn({setUserData, setLogedIn}) {
     const [userDataBase, setUserDataBase] = useState("None");
 
     useEffect(() => {
-        fetch(API)
+        fetch(userURL)
             .then((response) => response.json())
             .then(data => { setUserDataBase(data) })
     }, []);

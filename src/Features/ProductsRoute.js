@@ -2,14 +2,12 @@ import React from 'react';
 import ItemPage from './ItemPage/ItemPage';
 
 
-export default function ProductsRoute({itemData,cartUpdateCallBackFunction}) {
-<<<<<<< HEAD
+export default function ProductsRoute({ itemData, cartUpdateCallBackFunction }) {
 
-=======
->>>>>>> KevinMa
-        
     return (
-        <ItemPage itemData={itemData} 
-        cartUpdateCallBackFunction={cartUpdateCallBackFunction}/>
+        <ItemPage
+            itemData={itemData}
+            cartUpdateCallBackFunction={cartUpdateCallBackFunction}
+        />
     )
 }

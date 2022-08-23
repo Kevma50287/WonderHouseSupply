@@ -10,7 +10,7 @@ import ServicesRoute from './Features/ServicesRoute';
 import Cart from './Features/Cart';
 import LogIn from './Features/LogIn';
 import SignUp from './Features/SignUp';
-import React ,{ useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 const itemURL = 'http://localhost:3001/items'
@@ -22,41 +22,35 @@ const reviewsURL = 'http://localhost:3003/reviews'
 function App() {
 
 
-//state of loged in
-const[logedIn,setLogedIn]=useState("false")
-  
+  //state of loged in
+  const [logedIn, setLogedIn] = useState("false")
+
 
 
   // data of our user
-const [userData, setUserData]=useState({})
+  const [userData, setUserData] = useState({})
 
-function  cartUpdateCallBackFunction(qty,id,setQty) {
-  setQty("1")
-  console.log(userData)
-
-
-
-let newUserCart = userData.Cart.map((item)=> {
-  if (item.id == id) {return {id: item.id, numberOfItemsToBuy: `${+item.numberOfItemsToBuy + +qty}`}} 
-  else {return item} 
-})
-
-
-if (newUserCart === userData.Cart) {
-  newUserCart = [...newUserCart,{id: id, numberOfItemsToBuy: qty}]
-} else {}
+  function cartUpdateCallBackFunction(qty, id, setQty) {
+    setQty("1")
+    console.log(userData)
 
 
 
-
-  console.log(newUserCart)
-   console.log(logedIn)
-   console.log(qty)
-   console.log(id)
- }
- 
+    let newUserCart = userData.Cart.map((item) => {
+      if (item.id === id) { return { id: item.id, numberOfItemsToBuy: `${+item.numberOfItemsToBuy + +qty}` } }
+      else { return item }
+    })
 
 
+    if (newUserCart === userData.Cart) {
+      newUserCart = [...newUserCart, { id: id, numberOfItemsToBuy: qty }]
+    } else { }
+
+    console.log(newUserCart)
+    console.log(logedIn)
+    console.log(qty)
+    console.log(id)
+  }
 
   const [itemData, setItemData] = useState([])
 
@@ -73,21 +67,12 @@ if (newUserCart === userData.Cart) {
 
       <Routes>
         <Route path="/" element={<Main itemData={itemData} />} />
-<<<<<<< HEAD
-        <Route path="/about" element={<AboutRoute/>}/>
-        <Route path="/cart" element={<Cart userData={userData}/>}/>
-        <Route path="/logIn" element={<LogIn setUserData={setUserData} setLogedIn={setLogedIn}/>}/>
-        <Route path="/products"  element={<ProductsRoute itemData={itemData} cartUpdateCallBackFunction={cartUpdateCallBackFunction}/>}/>
-        <Route path="/services"  element={<ServicesRoute/>}/>
-        <Route path="/signUp" element={<SignUp/>}/>
-=======
         <Route path="/about" element={<AboutRoute />} />
-        <Route path="/products" element={<ProductsRoute itemData={itemData} />} />
+        <Route path="/cart" element={<Cart userData={userData} />} />
+        <Route path="/logIn" element={<LogIn setUserData={setUserData} setLogedIn={setLogedIn} />} />
+        <Route path="/products" element={<ProductsRoute itemData={itemData} cartUpdateCallBackFunction={cartUpdateCallBackFunction} />} />
         <Route path="/services" element={<ServicesRoute />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/logIn" element={<LogIn />} />
         <Route path="/signUp" element={<SignUp />} />
->>>>>>> KevinMa
       </Routes>
       <Footer />
       <AdminForm />

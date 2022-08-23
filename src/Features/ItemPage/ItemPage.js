@@ -7,15 +7,8 @@ import CategoryData from '../../Components/CategoryData'
 import Sort from './Sort'
 import { theme } from '../../Components/Main'
 
-<<<<<<< HEAD
-const ItemPage = ({ itemData, cartUpdateCallBackFunction }) => {
-  const [filter, setFilter] = useState("All")
-  const arrayItems = itemData.map((item) => {
-    return (
-      <Grid key={nanoid()} container item xs={12} sm={6} md={4} className='center'>
-        <ListItem item={item} key={item.id} cartUpdateCallBackFunction={cartUpdateCallBackFunction}/>
-=======
 //Function to return an array of keys when given and array and key
+
 const getUnique = (arr, key) => {
   let unique = []
   arr.forEach(element => {
@@ -26,7 +19,7 @@ const getUnique = (arr, key) => {
 }
 
 //Component
-const ItemPage = ({ itemData }) => {
+const ItemPage = ({ itemData, cartUpdateCallBackFunction }) => {
   const [filter, setFilter] = useState({
     category: "None",
     brand: "None"
@@ -55,7 +48,7 @@ const ItemPage = ({ itemData }) => {
   }
 
   const filteredItems = filterArray(itemData, filter)
- 
+
   //Sorting
 
   const sortArr = (arr) => {
@@ -100,8 +93,7 @@ const ItemPage = ({ itemData }) => {
         xs={12} sm={6} md={4}
         className='center'
       >
-        <ListItem item={item} key={item.id} />
->>>>>>> KevinMa
+        <ListItem item={item} key={item.id} cartUpdateCallBackFunction={cartUpdateCallBackFunction} />
       </Grid>
     )
   })
@@ -114,7 +106,6 @@ const ItemPage = ({ itemData }) => {
           <Grid
             item container
             xs={3} sm={3} md={3}
-
           >
             <Filter
               setFilter={setFilter}
@@ -132,16 +123,8 @@ const ItemPage = ({ itemData }) => {
             {arrayItems}
           </Grid>
         </Grid>
-<<<<<<< HEAD
-        <Grid item container xs={9} sm={9} md={9} columnSpacing={2} rowSpacing={2} className="margin10">
-          {arrayItems}
-        </Grid>
-      </Grid>
-    </>
-=======
       </ThemeProvider>
     </div>
->>>>>>> KevinMa
   )
 }
 
