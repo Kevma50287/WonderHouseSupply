@@ -22,18 +22,39 @@ const reviewsURL = 'http://localhost:3003/reviews'
 function App() {
 
 
-
-  function  cartUpdateCallBackFunction(qty,id,setQty) {
-    // setQty("")
-    console.log("upadate")
-  }
+//state of loged in
+const[logedIn,setLogedIn]=useState("false")
   
- 
 
 
   // data of our user
 const [userData, setUserData]=useState({})
 
+function  cartUpdateCallBackFunction(qty,id,setQty) {
+  setQty("1")
+  console.log(userData)
+
+
+
+let newUserCart = userData.Cart.map((item)=> {
+  if (item.id == id) {return {id: item.id, numberOfItemsToBuy: `${+item.numberOfItemsToBuy + +qty}`}} 
+  else {return item} 
+})
+
+
+if (newUserCart === userData.Cart) {
+  newUserCart = [...newUserCart,{id: id, numberOfItemsToBuy: qty}]
+} else {}
+
+
+
+
+  console.log(newUserCart)
+   console.log(logedIn)
+   console.log(qty)
+   console.log(id)
+ }
+ 
 
 
 
@@ -54,11 +75,8 @@ const [userData, setUserData]=useState({})
         <Route path="/" element={<Main itemData={itemData} />} />
         <Route path="/about" element={<AboutRoute/>}/>
         <Route path="/cart" element={<Cart userData={userData}/>}/>
-        <Route path="/logIn" element={<LogIn setUserData={setUserData}/>}/>
-        <Route path="/products"  element={<ProductsRoute 
-        itemData={itemData} 
-        cartUpdateCallBackFunction={cartUpdateCallBackFunction}
-        />}/>
+        <Route path="/logIn" element={<LogIn setUserData={setUserData} setLogedIn={setLogedIn}/>}/>
+        <Route path="/products"  element={<ProductsRoute itemData={itemData} cartUpdateCallBackFunction={cartUpdateCallBackFunction}/>}/>
         <Route path="/services"  element={<ServicesRoute/>}/>
         <Route path="/signUp" element={<SignUp/>}/>
       </Routes>

@@ -41,10 +41,22 @@
       "id": 2
     },
     {
-      "username": "KARL",
-      "password": "4321",
+      "username": "",
+      "password": "",
       "userCategory": "user",
-      "Cart": [],
+      "Cart": [
+        {
+          "id": "2",
+          "numberOfItemsToBuy": "8"
+        },
+        {
+          "id": "4",
+          "numberOfItemsToBuy": "9"
+        },
+        {
+          "id": "5",
+          "numberOfItemsToBuy": "7"
+        }],
       "id": 3
     },
     {

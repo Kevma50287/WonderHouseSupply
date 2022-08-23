@@ -32,11 +32,12 @@ function handleChange(e){
       </button>
       
 
-      <input type="number" name="Qty"  value={qty} step="1" placeholder="0" onChange={handleChange}/>
+      
 
       <button  onClick={() =>cartUpdateCallBackFunction(qty,id,setQty)}  className="header-button">
          Add to card<img src={Cart}/>
       </button>
+      <input type="number" name="Qty"  value={qty} step="1" placeholder="0" onChange={handleChange}/>
     </Grid>
   )
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
-export default function LogIn({setUserData}) {
+export default function LogIn({setUserData, setLogedIn}) {
 
 
     // API of users data base
@@ -63,7 +63,7 @@ export default function LogIn({setUserData}) {
                 .then((response) => response.json())
                 .then(data => {
                     setUserData(data)
-
+                    setLogedIn("true")
                     setNewUser("")
                     setPassword("")
                 })
