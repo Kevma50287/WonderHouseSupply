@@ -9,7 +9,7 @@ const Filter = ({setFilter, filter}) => {
   return (
     <Grid item>
       <form>
-        <label htmlFor='filterSelect'>Filter By:</label>
+        <label htmlFor='filterSelect'>Select Bran:</label>
         <select style={{display: 'block'}} >
           <option>1</option>
           <option>1</option>

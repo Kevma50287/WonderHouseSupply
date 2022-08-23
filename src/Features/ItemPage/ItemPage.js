@@ -18,10 +18,10 @@ const ItemPage = ({ itemData }) => {
   return (
     <>
       <Grid container  >
-        <Grid item container xs={4} sm={3} md={3}>
+        <Grid item container xs={3} sm={3} md={3}>
           <Filter setFilter={setFilter} filter={filter} />
         </Grid>
-        <Grid item container xs={8} sm={9} md={9} columnSpacing={3} rowSpacing={6} className="margin10">
+        <Grid item container xs={9} sm={9} md={9} columnSpacing={3} rowSpacing={6} className="margin10">
           {arrayItems}
         </Grid>
       </Grid>

@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemPage from '../Features/ItemPage/ItemPage';
+import ItemPage from './ItemPage/ItemPage';
 
 
 export default function ProductsRoute({itemData}) {
