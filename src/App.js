@@ -4,7 +4,7 @@ import Main from './Components/Main';
 import Footer from './Components/Footer';
 import AdminForm from './Features/AdminForm';
 import { Route, Routes } from 'react-router-dom';
-import  AboutRoute  from './Features/AboutRoute';
+import AboutRoute from './Features/AboutRoute';
 import ProductsRoute from './Features/ProductsRoute';
 import ServicesRoute from './Features/ServicesRoute';
 import Cart from './Features/Cart';
@@ -31,12 +31,12 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Main itemData={itemData} />} />
-        <Route path="/about" element={<AboutRoute/>}/>
-        <Route path="/products"  element={<ProductsRoute itemData={itemData} />}/>
-        <Route path="/services"  element={<ServicesRoute/>}/>
-        <Route path="/cart" element={<Cart/>}/>
-        <Route path="/logIn" element={<LogIn/>}/>
-        <Route path="/signUp" element={<SignUp/>}/>
+        <Route path="/about" element={<AboutRoute />} />
+        <Route path="/products" element={<ProductsRoute itemData={itemData} />} />
+        <Route path="/services" element={<ServicesRoute />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/logIn" element={<LogIn />} />
+        <Route path="/signUp" element={<SignUp />} />
       </Routes>
       <Footer />
       <AdminForm />

@@ -116,4 +116,11 @@ code {
   margin: 10px;
 }
 
+.filterby {
+  margin: 0;
+  position: relative;
+  left: 12px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
 
