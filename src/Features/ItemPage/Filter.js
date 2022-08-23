@@ -33,7 +33,7 @@ const Filter = ({ setFilter, filter, uniqueCategories, uniqueBrands }) => {
   })
 
   return (
-    <Grid item>
+    <Grid item id='filtercolumn'>
       <h3 className='filterby'>Filter By:</h3>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id="CategorySelect">Category</InputLabel>
@@ -48,11 +48,11 @@ const Filter = ({ setFilter, filter, uniqueCategories, uniqueBrands }) => {
           <MenuItem value="None">
             <em>None</em>
           </MenuItem>
-          {brandItems}
+          {categoryItems}
           
         </Select>
       </FormControl>
-
+      <br></br>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id="BrandSelectLabel">Brand</InputLabel>
         <Select
@@ -66,7 +66,7 @@ const Filter = ({ setFilter, filter, uniqueCategories, uniqueBrands }) => {
           <MenuItem value="None">
             <em>None</em>
           </MenuItem>
-          {categoryItems}
+          {brandItems}
         </Select>
       </FormControl>
     </ Grid>
