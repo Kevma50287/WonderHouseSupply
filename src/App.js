@@ -4,11 +4,12 @@ import Main from './Components/Main';
 import Footer from './Components/Footer';
 import AdminForm from './Features/AdminForm';
 import { Link, Route, Routes } from 'react-router-dom';
-import  AboutRoute  from './Routes/AboutRoute';
-import ProductsRoute from './Routes/ProductsRoute';
-import ServicesRoute from './Routes/ServicesRoute';
-import Cart from './Routes/Cart';
-import SearchBar from './Features/SearchBar'
+import  AboutRoute  from './Features/AboutRoute';
+import ProductsRoute from './Features/ProductsRoute';
+import ServicesRoute from './Features/ServicesRoute';
+import Cart from './Features/Cart';
+import LogIn from './Features/LogIn';
+import SignUp from './Features/SignUp';
 import { useEffect, useState } from 'react';
 
 const itemURL = 'http://localhost:3001/items'
@@ -34,6 +35,8 @@ function App() {
         <Route path="/products"  element={<ProductsRoute itemData={itemData} />}/>
         <Route path="/services"  element={<ServicesRoute/>}/>
         <Route path="/cart" element={<Cart/>}/>
+        <Route path="/logIn" element={<LogIn/>}/>
+        <Route path="/signUp" element={<SignUp/>}/>
       </Routes>
       <Footer />
       <AdminForm />

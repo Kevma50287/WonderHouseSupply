@@ -14,7 +14,7 @@ function AdminForm() {
         howToUse: "",
         category: "",
         finish: "",  
-        // relatedCategory:"", 
+        relatedCategory:"", 
         type: "",
         brand: "",
         image: ""
@@ -62,7 +62,7 @@ function AdminForm() {
           <input type="text" name="howToUse"  value={newTool.howToUse} placeholder="How to use" onChange={handleChange}/>
           <input type="text" name="category"  value={newTool.category} placeholder="Category" onChange={handleChange}/>
           <input type="text" name="finish"  value={newTool.finish} placeholder="Finish" onChange={handleChange}/>
-          {/* <input type="text" name="relatedCategory"  value={newTool.relatedCategory} placeholder="Related category" onChange={handleChange}/> */}
+          <input type="text" name="relatedCategory"  value={newTool.relatedCategory} placeholder="Related category" onChange={handleChange}/>
           <input type="text" name="type"  value={newTool.type} placeholder="Type" onChange={handleChange}/>
           <input type="text" name="brand"  value={newTool.brand} placeholder="Brand" onChange={handleChange}/>
           <button type="submit">Add Tool</button>

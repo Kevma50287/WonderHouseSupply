@@ -1,14 +1,23 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "username": "test123",
-        "password": "test123",
-        "userCategory": "admin",
-        "Cart": [{
-            "id": "247",
-            "numberOfItemsToBuy": "8"
-        }]
-      }
-    ]
-  }
+  "users": [
+    {
+      "id": 1,
+      "username": "test123",
+      "password": "test123",
+      "userCategory": "admin",
+      "Cart": [
+        {
+          "id": "247",
+          "numberOfItemsToBuy": "8"
+        }
+      ]
+    },
+    {
+      "username": "karl",
+      "password": "123",
+      "userCategory": "user",
+      "Cart": [],
+      "id": 2
+    }
+  ]
+}
