@@ -8,7 +8,8 @@ import  AboutRoute  from './Features/AboutRoute';
 import ProductsRoute from './Features/ProductsRoute';
 import ServicesRoute from './Features/ServicesRoute';
 import Cart from './Features/Cart';
-import SearchBar from './Features/SearchBar'
+import LogIn from './Features/LogIn';
+import SignUp from './Features/SignUp';
 
 const itemURL = 'http://localhost:3001/items'
 const userURL = 'http://localhost:3002/users'
@@ -25,7 +26,8 @@ function App() {
         <Route path="/products"   element={<ProductsRoute/>}/>
         <Route  path="/services"  element={<ServicesRoute/>}/>
         <Route path="/cart" element={<Cart/>}/>
-        <Route path="/searchBar" element={<SearchBar/>}/>
+        <Route path="/logIn" element={<LogIn/>}/>
+        <Route path="/signUp" element={<SignUp/>}/>
       </Routes>
       <Footer />
       <AdminForm />

@@ -36,3 +36,69 @@
     border-style: none;
     margin-right: 15px;
 }
+
+
+.loginContainer, .signupContainer{
+    width: 360px;
+    margin: 0 auto;
+    position:relative;
+    display: block;
+    height: max-content;
+}
+#signupForm{
+    background-color: #ffffff;
+    margin: 0 auto;
+    border-radius: 8px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 135px;
+    height: 320px;
+}
+
+.title{
+    text-align: center;
+    font-size: 25px;
+    font-family:"Poppins"
+}
+
+.infoLabel{
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(31, 30, 30, 0.668);
+    margin-bottom: -1px;
+}
+.infoInput{
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 8px ;
+    box-sizing: border-box;
+}
+#submitLogin, #submitCreate{
+    margin-top: 10px;
+}
+.formClick{
+    background-color: rgba(31, 30, 30, 0.668);
+    color: white;
+    font-family: "Poppins";
+    font-size: 14px;
+    border-radius:4px;
+    margin-top: 10px;
+}
+#loginForm{
+    background-color: #ffffff;
+    margin: 0 auto;
+    border-radius: 8px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 100px;
+    height: 300px;
+}
