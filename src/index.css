@@ -1,6 +1,6 @@
 :root {
   --brand-color1: #a94747;
-  --brand-color2: #ded5bf;
+  --brand-color2: #dbd4bf;
   --secondary-color1: #eae9e9;
   --secondary-color2: #f5f5f5;
   --secondary-color3: #142429;
@@ -112,8 +112,33 @@ code {
   color: var(--brand-color1);
 }
 
-.header {
-  margin: 10px;
+
+.filterby {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
+
+.main {
+  margin-top: 45px;
+}
+
+.paddingSmall {
+  padding: 50px
+}
+
+.sortRadio {
+  position:fixed;
+  top:52px;
+  left:0;
+  font-size: 10px;
+  background: white;
+  width: 98vw;
+  text-align: right;
+}
+
+#filtercolumn {
+  position: fixed;
+
+}
+
 
 

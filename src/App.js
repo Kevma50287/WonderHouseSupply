@@ -4,7 +4,7 @@ import Main from './Components/Main';
 import Footer from './Components/Footer';
 import AdminForm from './Features/AdminForm';
 import { Route, Routes } from 'react-router-dom';
-import  AboutRoute  from './Features/AboutRoute';
+import AboutRoute from './Features/AboutRoute';
 import ProductsRoute from './Features/ProductsRoute';
 import ServicesRoute from './Features/ServicesRoute';
 import Cart from './Features/Cart';
@@ -73,12 +73,21 @@ if (newUserCart === userData.Cart) {
 
       <Routes>
         <Route path="/" element={<Main itemData={itemData} />} />
+<<<<<<< HEAD
         <Route path="/about" element={<AboutRoute/>}/>
         <Route path="/cart" element={<Cart userData={userData}/>}/>
         <Route path="/logIn" element={<LogIn setUserData={setUserData} setLogedIn={setLogedIn}/>}/>
         <Route path="/products"  element={<ProductsRoute itemData={itemData} cartUpdateCallBackFunction={cartUpdateCallBackFunction}/>}/>
         <Route path="/services"  element={<ServicesRoute/>}/>
         <Route path="/signUp" element={<SignUp/>}/>
+=======
+        <Route path="/about" element={<AboutRoute />} />
+        <Route path="/products" element={<ProductsRoute itemData={itemData} />} />
+        <Route path="/services" element={<ServicesRoute />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/logIn" element={<LogIn />} />
+        <Route path="/signUp" element={<SignUp />} />
+>>>>>>> KevinMa
       </Routes>
       <Footer />
       <AdminForm />
