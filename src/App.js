@@ -19,9 +19,16 @@ const reviewsURL = 'http://localhost:3003/reviews'
 
 
 
-
 function App() {
 
+
+
+  function  cartUpdateCallBackFunction(qty,id,setQty) {
+    // setQty("")
+    console.log("upadate")
+  }
+  
+ 
 
 
   // data of our user
@@ -48,7 +55,10 @@ const [userData, setUserData]=useState({})
         <Route path="/about" element={<AboutRoute/>}/>
         <Route path="/cart" element={<Cart userData={userData}/>}/>
         <Route path="/logIn" element={<LogIn setUserData={setUserData}/>}/>
-        <Route path="/products"  element={<ProductsRoute itemData={itemData} />}/>
+        <Route path="/products"  element={<ProductsRoute 
+        itemData={itemData} 
+        cartUpdateCallBackFunction={cartUpdateCallBackFunction}
+        />}/>
         <Route path="/services"  element={<ServicesRoute/>}/>
         <Route path="/signUp" element={<SignUp/>}/>
       </Routes>

@@ -4,13 +4,12 @@ import React, { useState } from 'react'
 import ListItem from '../ListItem'
 import Filter from './Filter'
 
-const ItemPage = ({ itemData }) => {
+const ItemPage = ({ itemData, cartUpdateCallBackFunction }) => {
   const [filter, setFilter] = useState("All")
-
   const arrayItems = itemData.map((item) => {
     return (
       <Grid key={nanoid()} container item xs={12} sm={6} md={4} className='center'>
-        <ListItem item={item} key={item.id} />
+        <ListItem item={item} key={item.id} cartUpdateCallBackFunction={cartUpdateCallBackFunction}/>
       </Grid>
     )
   })
