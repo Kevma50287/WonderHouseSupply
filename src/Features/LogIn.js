@@ -67,7 +67,7 @@ export default function LogIn({ setUserData, setLogedIn }) {
     }
 
     return (
-        <div id="loginContainer" className="loginContainer">
+        <div id="loginContainer" className="loginContainer main">
             <form id="loginForm" onSubmit={handleSubmit}>
                 <b><p className="title">Login</p></b>
                 <label className="infoLabel">USERNAME</label>
