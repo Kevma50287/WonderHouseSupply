@@ -67,25 +67,11 @@
       "id": 5
     },
     {
-      "username": "pup",
-      "password": "pup",
-      "userCategory": "user",
-      "Cart": [],
-      "id": 6
-    },
-    {
-      "username": "",
-      "password": "",
-      "userCategory": "user",
-      "Cart": [],
-      "id": 7
-    },
-    {
-      "username": "karl",
+      "username": "qwert",
       "password": "123",
       "userCategory": "user",
       "Cart": [],
-      "id": 8
+      "id": 6
     }
   ]
 }

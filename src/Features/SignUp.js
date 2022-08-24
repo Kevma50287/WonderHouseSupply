@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
 export default function SignUp() {
@@ -59,7 +59,7 @@ let arrayAllUserNames = userNames.map((user) => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        if (password === confirmPassword && arrayAllUserNames.includes(`${newUser.username}`)) {
+        if (password === confirmPassword && !arrayAllUserNames.includes(`${newUser.username}`)) {
             fetch("http://localhost:3002/users", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -67,10 +67,11 @@ let arrayAllUserNames = userNames.map((user) => {
             })
                 .then((response) => response.json())
                 .then(data => console.log(data));
-            alert('Successfully created an account! Please log in!')
+           
             setPassword("");
             setConfirmPassword("");
             setNewUser(initialState);
+            alert('Successfully created an account! Please log in!')
         } else {
             setPassword("");
             setConfirmPassword("");
