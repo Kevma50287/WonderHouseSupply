@@ -28,7 +28,7 @@ function App() {
 
 
   // data of our user
-  const [userData, setUserData] = useState([{}])
+  const [userData, setUserData] = useState({Cart: []})
 
 function  cartUpdateCallBackFunction(qty,id,setQty) {
   setQty("1")
