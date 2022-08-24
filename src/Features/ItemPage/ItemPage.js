@@ -1,53 +1,26 @@
 import { Grid, ThemeProvider } from '@mui/material'
 import { nanoid } from '@reduxjs/toolkit'
-import React, { useState } from 'react'
+import React from 'react'
 import ListItem from '../ListItem'
 import Filter from './Filter'
 import CategoryData from '../../Components/CategoryData'
 import Sort from './Sort'
-import { theme } from '../../Components/Main'
-
-//Function to return an array of keys when given and array and key
-
-const getUnique = (arr, key) => {
-  let unique = []
-  arr.forEach(element => {
-    if (unique.includes(element[key])) { return }
-    else { unique.push(element[key]) }
-  });
-  return unique
-}
+import { useOutletContext } from 'react-router-dom'
 
 //Component
-const ItemPage = ({ itemData, cartUpdateCallBackFunction }) => {
-  const [filter, setFilter] = useState({
-    category: "None",
-    brand: "None"
-  })
-  const [sortVal, setSortVal] = useState('0')
+const ItemPage = () => {
+  ////////////////////////// FUNCTIONS ///////////////////////////////
 
-  const uniqueBrands = getUnique(itemData, 'brand')
-  const uniqueCategories = getUnique(CategoryData, 'category').map((item) => item.toLowerCase())
+  //Function to return an array of keys when given and array and key
 
-  //Filtering
-  const filterArray = (arr, filter) => {
-
-    if (filter.category !== "None") {
-      arr = arr.filter((item) => {
-        return item.category === filter.category
-      })
-    }
-
-    if (filter.brand !== "None") {
-      arr = arr.filter((item) => {
-        return item.brand === filter.brand
-      })
-    }
-
-    return arr
+  const getUnique = (arr, key) => {
+    let unique = []
+    arr.forEach(element => {
+      if (unique.includes(element[key])) { return }
+      else { unique.push(element[key]) }
+    });
+    return unique
   }
-
-  const filteredItems = filterArray(itemData, filter)
 
   //Sorting
 
@@ -83,6 +56,35 @@ const ItemPage = ({ itemData, cartUpdateCallBackFunction }) => {
     }
   }
 
+  //Filtering
+  const filterArray = (arr, filter) => {
+
+    if (filter.category !== "None") {
+      arr = arr.filter((item) => {
+        return item.category === filter.category
+      })
+    }
+
+    if (filter.brand !== "None") {
+      arr = arr.filter((item) => {
+        return item.brand === filter.brand
+      })
+    }
+
+    return arr
+  }
+
+
+  //////////////////////////// RENDER COMPONENT //////////////////////////////
+
+  const { sortVal, filter, itemData, cartUpdateCallBackFunction, setSortVal, setFilter } = useOutletContext()
+
+  const uniqueBrands = getUnique(itemData, 'brand')
+
+  const uniqueCategories = getUnique(CategoryData, 'category').map((item) => item.toLowerCase())
+
+  const filteredItems = filterArray(itemData, filter)
+
   const sortedItems = sortArr(filteredItems)
 
   const arrayItems = sortedItems.map((item) => {
@@ -98,35 +100,34 @@ const ItemPage = ({ itemData, cartUpdateCallBackFunction }) => {
     )
   })
 
+
+
   return (
-    <div className='main paddingSmall'>
+    <>
       <Sort sortVal={sortVal} setSortVal={setSortVal} />
-      <ThemeProvider theme={theme}>
-        <Grid container columnSpacing={1}  >
-          <Grid
-            item container
-            xs={3} sm={3} md={3}
-          >
-            <Filter
-              setFilter={setFilter}
-              filter={filter}
-              uniqueBrands={uniqueBrands}
-              uniqueCategories={uniqueCategories}
-            />
-          </Grid>
-          <Grid
-            item container
-            xs={9} sm={9} md={9}
-            columnSpacing={2} rowSpacing={2}
-            className="margin10"
-          >
-            {arrayItems}
-          </Grid>
+      <Grid container columnSpacing={1}  >
+        <Grid
+          item container
+          xs={3} sm={3} md={3}
+        >
+          <Filter
+            setFilter={setFilter}
+            filter={filter}
+            uniqueBrands={uniqueBrands}
+            uniqueCategories={uniqueCategories}
+          />
         </Grid>
-      </ThemeProvider>
-    </div>
+        <Grid
+          item container
+          xs={9} sm={9} md={9}
+          columnSpacing={2} rowSpacing={2}
+          className="margin10"
+        >
+          {arrayItems}
+        </Grid>
+      </Grid>
+    </>
   )
 }
 
-export { getUnique }
 export default ItemPage

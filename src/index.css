@@ -140,3 +140,35 @@ code {
   position: fixed;
 
 }
+
+.center-image {
+  margin: 1px auto;
+  max-width: 500px;
+  max-height: 500px;
+  justify-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+#BasicProductBox {
+  flex-flow: column nowrap;
+}
+
+.MoreInfoProductBox {
+  font-weight: bold;
+  margin: 0px auto;
+  transition: all 500ms;
+} 
+
+.MoreInfoProductBoxSelected {
+  color: var(--highlight);
+  font-weight: bold;
+  margin: 0px auto;
+  transition: all 500ms;
+}
+
+.InfoContainer {
+  border-bottom: 1px solid var(--secondary-color3);
+}

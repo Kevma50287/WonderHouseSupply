@@ -11,6 +11,9 @@ import Cart from './Features/Cart';
 import LogIn from './Features/LogIn';
 import SignUp from './Features/SignUp';
 import React, { useEffect, useState } from 'react';
+import ItemPage from './Features/ItemPage/ItemPage';
+import ProductInfo from './Features/ProductInfo';
+import NotFound from './Features/NotFound';
 
 
 const itemURL = 'http://localhost:3001/items'
@@ -44,7 +47,7 @@ function App() {
 
     // if (newUserCart === userData.Cart) {
     let newUserCartTwo = newUserCart.filter((item) => {
-      if (item.id == id) { return item } else { }
+      if (item.id === id) { return item } else { }
     })
 
 
@@ -93,10 +96,12 @@ function App() {
             cartUpdateCallBackFunction={cartUpdateCallBackFunction}
           />
         }>
-          {/* <Route path=":productId" element={<ProductContet/>}> */}
+          <Route index element={<ItemPage />} /> 
+          <Route path=":productId" element={<ProductInfo />} />
         </Route>
         <Route path="/services" element={<ServicesRoute />} />
         <Route path="/signUp" element={<SignUp />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
       <Footer />
       <AdminForm />
