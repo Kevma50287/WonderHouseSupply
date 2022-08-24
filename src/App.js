@@ -32,7 +32,7 @@ const [userData, setUserData]=useState({})
 
 function  cartUpdateCallBackFunction(qty,id,setQty) {
   setQty("1")
-  console.log(userData)
+  // console.log(userData)
 
 
 
@@ -42,17 +42,28 @@ let newUserCart = userData.Cart.map((item)=> {
 })
 
 
-if (newUserCart === userData.Cart) {
-  newUserCart = [...newUserCart,{id: id, numberOfItemsToBuy: qty}]
-} else {}
+// if (newUserCart === userData.Cart) {
+  let newUserCartTwo = newUserCart.filter((item) => {
+    if(item.id == id){return item} else {}
+  })
+  
+
+ 
+  
+  if  ( newUserCartTwo.length === 0){ newUserCart = [...userData.Cart,{id: `${id}`, numberOfItemsToBuy: qty}]
+} else {console.log("wow")}
+ 
+  
+  // 
+// } else {}
+
+ console.log(newUserCart)
+ console.log(logedIn)
+ console.log(qty)
+ console.log(id)
 
 
-
-
-  console.log(newUserCart)
-   console.log(logedIn)
-   console.log(qty)
-   console.log(id)
+  
  }
  
 
