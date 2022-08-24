@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <div className='header'>
       <Link to="/" className="header-route">
-        <img className="header-route" src={GroupLogo} alt="group logo" />
+        <img className="header-route wonderLogo" src={GroupLogo} alt="group logo" />
       </Link>
 
       <div className='header-routes'>
