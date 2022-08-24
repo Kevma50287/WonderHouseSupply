@@ -1,27 +1,40 @@
-
 .header {
-    background-color:#FCFCFC ;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: var(--secondary-color1);
+    width: 100vw;
+    opacity: 100;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
 }
 
-
-
-
 .header-route {
-    margin-right: 50px;
+    margin-right: 20px;
     color: #373F41;
     font-family: 'Mulish';
 
 }
 
 .header-routes {
-    align-items: center;
-    margin: auto;
     width: 50%;
     display: flex;
-  }
+    justify-content: center;
+    align-items: center;
+}
 
+.header-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px
+    
+}
 
-
+.header-button:hover {
+    cursor: pointer;
+}
 
 .wonderLogo {
     color: #A94747;
@@ -32,20 +45,27 @@
 
 
 .header-button {
-    background-color:#FCFCFC ;
+    background-color: #FCFCFC;
     border-style: none;
-    margin-right: 15px;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    font-family: var(--main-Font);
+    font-weight: bold;
+    z-index: index 2;
 }
 
 
-.loginContainer, .signupContainer{
+.loginContainer,
+.signupContainer {
     width: 360px;
     margin: 0 auto;
-    position:relative;
+    position: relative;
     display: block;
     height: max-content;
 }
-#signupForm{
+
+#signupForm {
     background-color: #ffffff;
     margin: 0 auto;
     border-radius: 8px;
@@ -59,37 +79,42 @@
     height: 320px;
 }
 
-.title{
+.title {
     text-align: center;
     font-size: 25px;
-    font-family:"Poppins"
+    font-family: "Poppins"
 }
 
-.infoLabel{
+.infoLabel {
     font-family: "Poppins";
     font-size: 14px;
     font-weight: bold;
     color: rgba(31, 30, 30, 0.668);
     margin-bottom: -1px;
 }
-.infoInput{
+
+.infoInput {
     width: 100%;
     padding: 10px 20px;
-    margin-bottom: 8px ;
+    margin-bottom: 8px;
     box-sizing: border-box;
 }
-#submitLogin, #submitCreate{
+
+#submitLogin,
+#submitCreate {
     margin-top: 10px;
 }
-.formClick{
+
+.formClick {
     background-color: rgba(31, 30, 30, 0.668);
     color: white;
     font-family: "Poppins";
     font-size: 14px;
-    border-radius:4px;
+    border-radius: 4px;
     margin-top: 10px;
 }
-#loginForm{
+
+#loginForm {
     background-color: #ffffff;
     margin: 0 auto;
     border-radius: 8px;

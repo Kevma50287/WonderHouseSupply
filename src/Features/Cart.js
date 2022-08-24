@@ -14,7 +14,7 @@ console.log(Cart)
 
 
   return (
-    <div id="myCard">
+    <div id="myCard"className='main'>
         <h1>Cart</h1>
     </div>
     

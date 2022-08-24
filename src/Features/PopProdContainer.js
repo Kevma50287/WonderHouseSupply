@@ -2,7 +2,7 @@ import ListItem from './ListItem'
 import { Grid } from '@mui/material'
 import { nanoid } from '@reduxjs/toolkit'
 
-export default function PopProdContainer({itemData}) {
+export default function PopProdContainer({ itemData }) {
 
 
   const arrayItems = itemData.map((item) => {

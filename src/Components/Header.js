@@ -7,11 +7,11 @@ import { Link } from 'react-router-dom';
 export default function Header() {
   return (
     <div className='header'>
-      <div className='header-routes'>
+      <Link to="/" className="header-route">
+        <img className="header-route" src={GroupLogo} alt="group logo" />
+      </Link>
 
-        <Link to="/" className="header-route">
-          <img className="header-route" src={GroupLogo} alt="group logo" />
-        </Link>
+      <div className='header-routes'>
 
         <Link to="/about" className="header-route">ABOUT</Link>
 
@@ -19,6 +19,8 @@ export default function Header() {
 
         <Link to="/services" className="header-route">SERVICES</Link>
 
+      </div>
+      <div className='header-buttons'>
         <button className="header-button">
           <img src={searchIcon} alt="search icon" />
         </button>
@@ -31,7 +33,7 @@ export default function Header() {
 
         <Link to="/logIn">
           <button className="header-button">
-            Log In
+            Login
           </button>
         </Link>
 
@@ -40,7 +42,6 @@ export default function Header() {
             Sign Up
           </button>
         </Link>
-
       </div>
     </div>
 
