@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
 export default function SignUp() {
@@ -11,13 +11,31 @@ export default function SignUp() {
         "Cart": []
     }
 
+    
 
     const [newUser, setNewUser] = useState(initialState);
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
 
+//array with all userNames 
+const [userNames, setUserNames] = useState([])
 
+useEffect(() => {
+  fetch("http://localhost:3002/users")
+    .then(r => r.json())
+    .then(d => setUserNames(d));
+}, [])
+
+
+
+let arrayAllUserNames = userNames.map((user) => {
+    return user.username
+
+    
+})
+
+// console.log(arrayAllUserNames)
 
     const handleChange = function (e) {
         let { name, value } = e.target
@@ -37,11 +55,11 @@ export default function SignUp() {
         setConfirmPassword((confirmPassword) => confirmPassword = e.target.value)
     }
 
-
+    // && arrayAllUserNames.includes(newUser.username)
 
     function handleSubmit(e) {
         e.preventDefault();
-        if (password === confirmPassword) {
+        if (password === confirmPassword && arrayAllUserNames.includes(`${newUser.username}`)) {
             fetch("http://localhost:3002/users", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
