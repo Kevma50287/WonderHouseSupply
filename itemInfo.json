@@ -1,6 +1,21 @@
 {
   "items": [
     {
+      "name": "Construction Helmet",
+      "placeText": "Glacier Bay",
+      "price": "10.99",
+      "numberInStock": "88",
+      "description": "A plain old helmet to keep your noggin safe",
+      "specifications": "Specifications",
+      "howToUse": "Explore More on homedepot.com",
+      "category": "workwear",
+      "finish": "Stainless Steel",
+      "type": "Hat",
+      "brand": "Glacier Bay",
+      "image": "https://media.istockphoto.com/photos/construction-helmet-picture-id1179610447?k=20&m=1179610447&s=170667a&w=0&h=lxxpMGm3AMHZjaPW4jgedwO5f17FuU4gL-wqItSaXnk=",
+      "id": 1
+    },
+    {
       "name": "Sadira Single-Handle Pull-Down Sprayer Kitchen Faucet with TurboSpray and FastMount in Stainless SteelGlacier Bay",
       "placeText": "Glacier Bay",
       "price": "37.99",

@@ -3,9 +3,9 @@ import { Grid } from '@mui/material'
 import { nanoid } from '@reduxjs/toolkit'
 
 export default function PopProdContainer({ itemData }) {
+  const firstFour = itemData.slice(0, 4)
 
-
-  const arrayItems = itemData.map((item) => {
+  const arrayItems = firstFour.map((item) => {
     return (
       <Grid key={nanoid()} container item xs={12} sm={6} md={3} className='center'>
         <ListItem item={item} key={item.id} />
