@@ -15,20 +15,14 @@ import ItemPage from './Features/ItemPage/ItemPage';
 import ProductInfo from './Features/ProductInfo';
 import NotFound from './Features/NotFound';
 
-
 const itemURL = 'http://localhost:3001/items'
 const userURL = 'http://localhost:3002/users'
 const reviewsURL = 'http://localhost:3003/reviews'
 
-
-
 function App() {
-
 
   //state of loged in
   const [logedIn, setLogedIn] = useState("false")
-
-
 
   // data of our user
   const [userData, setUserData] = useState({ Cart: [] })
@@ -36,9 +30,6 @@ function App() {
   function cartUpdateCallBackFunction(qty, id, setQty) {
     setQty("1")
     // console.log(userData)
-
-
-
     let newUserCart = userData.Cart.map((item) => {
       if (item.id === id) { return { id: item.id, numberOfItemsToBuy: `${+item.numberOfItemsToBuy + +qty}` } }
       else { return item }
@@ -50,14 +41,9 @@ function App() {
       if (item.id === id) { return item } else { }
     })
 
-
-
-
     if (newUserCartTwo.length === 0) {
       newUserCart = [...userData.Cart, { id: `${id}`, numberOfItemsToBuy: qty }]
     } else { console.log("wow") }
-
-
     // 
     // } else {}
 
@@ -65,8 +51,6 @@ function App() {
     console.log(logedIn)
     console.log(qty)
     console.log(id)
-
-
 
   }
 
@@ -96,7 +80,7 @@ function App() {
             cartUpdateCallBackFunction={cartUpdateCallBackFunction}
           />
         }>
-          <Route index element={<ItemPage />} /> 
+          <Route index element={<ItemPage />} />
           <Route path=":productId" element={<ProductInfo />} />
         </Route>
         <Route path="/services" element={<ServicesRoute />} />

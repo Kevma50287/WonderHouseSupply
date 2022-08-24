@@ -44,6 +44,7 @@ code {
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
+  margin: 0px auto 10px auto;
 }
 
 .center {
@@ -51,6 +52,8 @@ code {
   align-items: center;
   justify-content: center;
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .center-horizontal {
@@ -70,6 +73,7 @@ code {
   width: 250px;
   aspect-ratio: auto 250 / 25;
   height: 25px;
+  margin: 0px 0px 10px 0px;
 }
 
 .button-style {
@@ -160,7 +164,7 @@ code {
   font-weight: bold;
   margin: 0px auto;
   transition: all 500ms;
-} 
+}
 
 .MoreInfoProductBoxSelected {
   color: var(--highlight);
@@ -172,3 +176,13 @@ code {
 .InfoContainer {
   border-bottom: 1px solid var(--secondary-color3);
 }
+
+.categoryflex {
+  display: flex;
+  flex-flow: column;
+}
+
+.pointer {
+  cursor: pointer;
+}
+

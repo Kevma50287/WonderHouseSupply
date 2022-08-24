@@ -1,4 +1,4 @@
-import { Grid, ThemeProvider } from '@mui/material'
+import { Grid } from '@mui/material'
 import { nanoid } from '@reduxjs/toolkit'
 import React from 'react'
 import ListItem from '../ListItem'
@@ -74,16 +74,28 @@ const ItemPage = () => {
     return arr
   }
 
+  //Searching
+
+  const searchArr = (arr, search) => {
+    if (search) {
+      return arr.filter((item) => item.name.toLowerCase().includes(search.toLowerCase()))
+    } else {
+      return arr
+    }
+  }
+
 
   //////////////////////////// RENDER COMPONENT //////////////////////////////
 
-  const { sortVal, filter, itemData, cartUpdateCallBackFunction, setSortVal, setFilter } = useOutletContext()
+  const { sortVal, filter, itemData, cartUpdateCallBackFunction, setSortVal, setFilter, search } = useOutletContext()
 
   const uniqueBrands = getUnique(itemData, 'brand')
 
   const uniqueCategories = getUnique(CategoryData, 'category').map((item) => item.toLowerCase())
 
-  const filteredItems = filterArray(itemData, filter)
+  const searchedItems = searchArr(itemData, search)
+
+  const filteredItems = filterArray(searchedItems, filter)
 
   const sortedItems = sortArr(filteredItems)
 
@@ -99,8 +111,6 @@ const ItemPage = () => {
       </Grid>
     )
   })
-
-
 
   return (
     <>

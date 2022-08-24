@@ -37,7 +37,7 @@ export default function ListItem({ item, cartUpdateCallBackFunction }) {
 
 
       <button onClick={() => cartUpdateCallBackFunction(qty, id, setQty)} className="header-button">
-        Add to card<img src={Cart} />
+        Add to card<img src={Cart} alt='add to cart' />
       </button>
       <input type="number" name="Qty" value={qty} step="1" placeholder="0" onChange={handleChange} />
     </Grid>

@@ -1,10 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 import GroupLogo from '../ProjectImajes/5 links center/GroupLogo.png';
 import searchIcon from '../ProjectImajes/5 links center/searchIcon.png';
 import Cart from '../ProjectImajes/5 links center/Cart.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { Box, Button, Modal, Typography } from '@mui/material';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 
 export default function Header() {
+  const [searchText, setSearchText] = useState("")
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  const navigate = useNavigate()
+
+  const handleGoToSearch = () => {
+    handleClose()
+    navigate('/products', {
+      state: {
+        search:searchText
+      }
+    })
+  }
+
+  const handleInput = (e) => {
+    setSearchText(e.target.value)
+  }
+
   return (
     <div className='header'>
       <Link to="/" className="header-route">
@@ -22,7 +54,27 @@ export default function Header() {
       </div>
       <div className='header-buttons'>
         <button className="header-button">
-          <img src={searchIcon} alt="search icon" />
+          <img src={searchIcon} alt="search icon" onClick={handleOpen} />
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box sx={style}>
+              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                Please type in the name of item:
+              </Typography>
+              <input
+                type="text"
+                id="modalInput"
+                name="search"
+                value={searchText}
+                onChange={handleInput}
+              />
+              <Button onClick={handleGoToSearch}>Search</Button>
+            </Box>
+          </Modal>
         </button>
 
         <Link to="/cart">
