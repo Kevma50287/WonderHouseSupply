@@ -17,7 +17,8 @@ export default function LogIn({ setUserData, setLogedIn }) {
 
     // id of userName and id of password
     let idUserName = 'None';
-    let idPassword = 'None';
+    let idPassword = [];
+    // let idPassword = 'None';
 
     //states for userName and password
     const [userName, setNewUser] = useState("");
@@ -40,6 +41,7 @@ export default function LogIn({ setUserData, setLogedIn }) {
         userDataBase.forEach((oneObj) => {
             if (oneObj.username === userName) {
                 idUserName = oneObj.id;
+                console.log(idUserName)
             } else {
                 // console.log('not match')
             }
@@ -48,14 +50,16 @@ export default function LogIn({ setUserData, setLogedIn }) {
         //get the id of password
         userDataBase.forEach((oneObj) => {
             if (oneObj.password === password) {
-                idPassword = oneObj.id;
+                idPassword.push(oneObj.id);
+                console.log(idPassword)
             } else {
                 // console.log('not match')
             }
         })
+        // idUserName === idPassword
 
         // match id of userName and id of password
-        if (idUserName === idPassword && idUserName !== 'None' && idPassword !== 'None') {
+        if (idPassword.includes(idUserName) && idUserName !== 'None' && idPassword !== 'None') {
             alert('you are logged in')
             fetch(`http://localhost:3002/users/${idUserName}`)
                 .then((response) => response.json())
@@ -64,6 +68,7 @@ export default function LogIn({ setUserData, setLogedIn }) {
                     setLogedIn("true")
                     setNewUser("")
                     setPassword("")
+                    idPassword = []
                 })
         } else { alert('Your username or password is incorrect. Please try again.') }
     }

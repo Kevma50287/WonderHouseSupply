@@ -72,7 +72,7 @@
     },
     {
       "username": "123",
-      "password": "123",
+      "password": "1234",
       "userCategory": "user",
       "Cart": [],
       "id": 6
@@ -86,7 +86,7 @@
     },
     {
       "username": "poope",
-      "password": "123",
+      "password": "12345",
       "userCategory": "user",
       "Cart": [
         {
@@ -103,6 +103,34 @@
         }
       ],
       "id": 8
+    },
+    {
+      "username": "kuk",
+      "password": "123456",
+      "userCategory": "user",
+      "Cart": [],
+      "id": 9
+    },
+    {
+      "username": "d",
+      "password": "1",
+      "userCategory": "user",
+      "Cart": [],
+      "id": 10
+    },
+    {
+      "username": "f",
+      "password": "1",
+      "userCategory": "user",
+      "Cart": [],
+      "id": 11
+    },
+    {
+      "username": "g",
+      "password": "1",
+      "userCategory": "user",
+      "Cart": [],
+      "id": 12
     }
   ]
 }
