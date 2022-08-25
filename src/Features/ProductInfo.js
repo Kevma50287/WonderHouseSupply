@@ -47,17 +47,19 @@ const ProductInfo = ({cartUpdateCallBackFunction}) => {
         <>
             <Grid container  >
                 <Grid item xs={12} sm={8} md={8} lg={6} className="flex">
-                    <img src={image} alt="item" className='center-image' />
+                    <img src={image} alt="item" className='center-image' id='productInfoImage' />
                 </Grid>
                 <Grid item xs={12} sm={4} md={4} lg={6} className="flex" id="BasicProductBox">
                     <h1>{name}</h1>
                     <div>{description}</div>
+                    <br/>
                     <div>{numberInStock} items in stock</div>
                     <h2>${price}</h2>
                     <button onClick={() => cartUpdateCallBackFunction(qty, productId, setQty)} className="cartIcon">
                         Add to cart<img src={Cart} alt='add to cart' />
                     </button>
-                    <input type="number" name="Qty" value={qty} step="1" placeholder="0" onChange={handleChange} />
+                    <br/>
+                    <input type="number" name="Qty" value={qty} step="1" placeholder="0" onChange={(e) => handleChange(e, numberInStock)} id='quantitySelector' />
                 </Grid>
             </Grid>
 
@@ -66,13 +68,13 @@ const ProductInfo = ({cartUpdateCallBackFunction}) => {
             <br />
 
             <Grid container className='InfoContainer'>
-                <Grid item xs={4} sm={4} md={4} lg={4} className="flex">
+                <Grid item xs={12} sm={4} md={4} lg={4} className="flex">
                     <div className={infoDisplay === 'Details' ? 'MoreInfoProductBoxSelected' : 'MoreInfoProductBox'} onClick={() => setInfoDisplay('Details')}>Details</div>
                 </Grid>
-                <Grid item xs={4} sm={4} md={4} lg={4} className="flex">
+                <Grid item xs={12} sm={4} md={4} lg={4} className="flex">
                     <div className={infoDisplay === 'Specifications' ? 'MoreInfoProductBoxSelected' : 'MoreInfoProductBox'} onClick={() => setInfoDisplay('Specifications')}>Specifications</div>
                 </Grid>
-                <Grid item xs={4} sm={4} md={4} lg={4} className="flex">
+                <Grid item xs={12} sm={4} md={4} lg={4} className="flex">
                     <div className={infoDisplay === 'Howto' ? 'MoreInfoProductBoxSelected' : 'MoreInfoProductBox'} onClick={() => setInfoDisplay('Howto')}>How to Use</div>
                 </Grid>
             </Grid>

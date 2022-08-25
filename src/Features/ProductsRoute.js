@@ -26,8 +26,8 @@ export default function ProductsRoute({ itemData}) {
     //state for quality of itimes
     const [qty, setQty] = useState("1")
 
-    function handleChange(e) {
-        setQty(e.target.value)
+    function handleChange(e, numberInStock) {
+        if (e.target.value > -1 && parseInt(e.target.value) < numberInStock) {setQty(e.target.value)}
     }
 
 

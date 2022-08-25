@@ -15,11 +15,6 @@ export default function LogIn({ setUserData, setLogedIn }) {
             .then(data => { setUserDataBase(data) })
     }, []);
 
-    // id of userName and id of password
-    let idUserName = 'None';
-    let idPassword = [];
-    // let idPassword = 'None';
-
     //states for userName and password
     const [userName, setNewUser] = useState("");
     const [password, setPassword] = useState("");
@@ -36,6 +31,12 @@ export default function LogIn({ setUserData, setLogedIn }) {
     // log in button
     function handleSubmit(e) {
         e.preventDefault();
+
+        // id of userName and id of password
+        let idUserName = 'None';
+        let idPassword = [];
+
+
         //  1) Get the info from data base  it is userDataBase
         //get the id of user name
         userDataBase.forEach((oneObj) => {
@@ -74,31 +75,29 @@ export default function LogIn({ setUserData, setLogedIn }) {
     }
 
     return (
-       
-  
-<div className="full-screen-container">
-<div className="login-container">
-    <h1 className="login-title">Welcome</h1>
-    <form className="form" onSubmit={handleSubmit}>
-        <div className="input-group success">
-            <label className="username">Username</label>
-            <input type="text" name="username"  value={userName} onChange={handleChange}/>
-            <span className="msg"> Type Valid username</span>
+        <div className="full-screen-container">
+            <div className="login-container">
+                <h1 className="login-title">Welcome</h1>
+                <form className="form" onSubmit={handleSubmit}>
+                    <div className="input-group success">
+                        <label className="username">Username</label>
+                        <input type="text" name="username" value={userName} onChange={handleChange} />
+                        <span className="msg"> Type Valid username</span>
+                    </div>
+
+                    <div className="input-group success">
+                        <label className="password">Password</label>
+                        <input type="password" name="password" id="password" value={password} onChange={handleChange} />
+                        {/* <input id="password"  type="password" name="password" value={password} onChange={handleChange} /> */}
+                        {/* <span className="msg">Incorrect password</span> */}
+                    </div>
+
+                    <button type="submit" className="login-button">Login</button>
+                </form>
+            </div>
         </div>
 
-        <div className="input-group success">
-            <label className="password">Password</label>
-            <input type="password" name="password" id="password" value={password} onChange={handleChange}/>
-            {/* <input id="password"  type="password" name="password" value={password} onChange={handleChange} /> */}
-            {/* <span className="msg">Incorrect password</span> */}
-        </div>
 
-        <button type="submit" className="login-button">Login</button>
-    </form>
-</div>
-</div>
-
-    
     )
 }
 

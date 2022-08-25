@@ -29,6 +29,7 @@
   background-color: var(--secondary-color3);
   left:0;
   top: 57px;
+  z-index:2;
 }
 
 .header-route {
@@ -165,9 +166,6 @@
     --error-hsl: 0, 60%, 50%;
   }
   
-  body {
-    margin: 0;
-  }
   
   .full-screen-container {
     background-image: url("https://images5.alphacoders.com/122/1227893.jpg");
@@ -178,6 +176,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    right: 0;
   }
   
   .login-container {

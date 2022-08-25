@@ -12,14 +12,14 @@
   box-sizing: border-box;
 }
 
-
 body {
-  margin: 0;
+  margin: auto;
   font-family: var(--main-Font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 20px;
   max-width: 1400px;
+  min-width: 400px;
 }
 
 code {
@@ -95,17 +95,20 @@ code {
 
 .itemdetail {
   overflow: hidden;
-  height: 65px;
+  height: 60px;
 }
 
 .itemname {
-  height: 65px;
+  height: 58px;
+  width:60%;
   overflow: hidden;
   font-weight: 700;
+  margin:auto
 }
 
 .itemprice {
   font-weight: bold;
+  font-size: 23px;
 }
 
 .itemstock {
@@ -151,6 +154,7 @@ code {
   font-weight: bold;
   margin: 0px auto;
   transition: all 500ms;
+  cursor: pointer;
 }
 
 .MoreInfoProductBoxSelected {
@@ -158,6 +162,15 @@ code {
   font-weight: bold;
   margin: 0px auto;
   transition: all 500ms;
+  cursor: pointer;
+}
+
+#productInfoImage {
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 500px;
+  min-width: 350px ;
 }
 
 .InfoContainer {
@@ -192,7 +205,7 @@ code {
 
 #footer {
   background: var(--secondary-color3);
-  height: 400px;
+  height: 100%;
 }
 
 #footerLinkContainer{
@@ -238,7 +251,7 @@ code {
 #InnerReviewContainer {
   display: flex;
   flex-flow: row nowrap;
-  
+  justify-content: center;
 }
 
 .review {
@@ -246,5 +259,29 @@ code {
   padding: 10px 20px;
   margin:5px;
   border-radius: 15px;
-  flex: 1 1 0px
+  flex: 1 1 0px;
+  position: relative;
+}
+
+.reviewUserTag {
+  font-weight: bold;
+  bottom: 0px;
+  margin: 10px auto
+}
+
+.userReview {
+  max-height: 60px;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+#AppContainer {
+  padding:2rem;
+}
+
+#quantitySelector{
+  width: 100px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: bold;
 }
