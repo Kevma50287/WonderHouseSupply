@@ -306,3 +306,7 @@
     max-width: 1400px;
     margin-bottom: 100px
   }
+
+  #PageBar {
+    margin: 30px auto 0px auto;
+  }
