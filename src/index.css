@@ -285,3 +285,9 @@ code {
   text-align: center;
   font-weight: bold;
 }
+
+#modalInput {
+  width: 70%;
+  height: 37px;
+  margin-right:5px
+}
