@@ -11,10 +11,11 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 400,
-  bgcolor: 'background.paper',
+  bgcolor: '#00141F',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
+  color:'#ffffff',
 };
 
 export default function Header() {
@@ -63,7 +64,7 @@ export default function Header() {
             aria-describedby="modal-modal-description"
           >
             <Box sx={style}>
-              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              <Typography id="modal-modal-description" sx={{ mt: 2, mb:1}}>
                 Please type in the name of item:
               </Typography>
               <input
@@ -73,7 +74,7 @@ export default function Header() {
                 value={searchText}
                 onChange={handleInput}
               />
-              <Button onClick={handleGoToSearch}>Search</Button>
+              <Button  onClick={handleGoToSearch}>Search</Button>
             </Box>
           </Modal>
         </button>
