@@ -28,8 +28,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 200px
-    
+    width: 200px;
+    margin-right: 30px
 }
 
 .header-button:hover {
@@ -39,7 +39,7 @@
 .wonderLogo {
     color: #A94747;
     font-family: 'Mulish';
-    margin-right: 100px;
+    margin: auto 25px;
 
 }
 
@@ -52,7 +52,7 @@
     height: 40px;
     font-family: var(--main-Font);
     font-weight: bold;
-    z-index: index 2;
+    z-index: 2;
 }
 
 
