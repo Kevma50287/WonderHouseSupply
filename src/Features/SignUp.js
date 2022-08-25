@@ -88,18 +88,52 @@ let arrayAllUserNames = userNames.map((user) => {
 
 
     return (
-        <div id="signupContainer" className='hide' >
-            <form id="signupForm" onSubmit={handleSubmit}>
-                <b><p className='title'>Create New Account</p></b>
-                <label className="infoLabel">USERNAME</label>
-                <input id="signupUsername" className="infoInput" type="text" name="username" onChange={handleChange} />
-                <label className="infoLabel">PASSWORD</label>
-                <input id="signupPass" className="infoInput" type="password" name="password" onChange={handleChange} />
-                <label className="infoLabel">CONFIRM PASSWORD</label>
-                <input id="signupConfirmPass" className="infoInput" type="password" name="confirmPassword" onChange={handleChangeTwo} />
-                <input id="submitCreate" type="submit" className="formClick" value="SIGN UP" />
-                <button id="goBackLoginBtn" type="button" className="formClick"><Link to="/logIn">Go Back To Login</Link></button>
-            </form>
+       
+<div className="full-screen-container">
+<div className="login-container">
+    <h1 className="login-title">Welcome</h1>
+    <form className="form" onSubmit={handleSubmit}>
+        <div className="input-group success">
+            <label className="username">Username</label>
+            <input type="text" name="username"  onChange={handleChange}/>
+            {/* <span className="msg"> Type Valid username</span> */}
         </div>
+
+        <div className="input-group success">
+            <label className="password">Password</label>
+            <input type="password" name="password" id="password"  onChange={handleChange}/>
+            {/* <span className="msg">Incorrect password</span> */}
+        </div>
+        <div className="input-group success">
+            <label className="password">Confirm Password</label>
+            <input type="password" name="confirmPassword" id="password"  onChange={handleChange}/>
+            {/* <span className="msg">Incorrect password</span> */}
+        </div>
+
+        <button type="submit" className="login-button">Login</button>
+    </form>
+</div>
+</div>
     );
 }
+
+
+
+
+
+
+
+
+{/* <div id="signupContainer" className='hide' >
+<form id="signupForm" onSubmit={handleSubmit}>
+    <b><p className='title'>Create New Account</p></b>
+    <label className="infoLabel">USERNAME</label>
+    <input id="signupUsername" className="infoInput" type="text" name="username" onChange={handleChange} />
+    <label className="infoLabel">PASSWORD</label>
+    <input id="signupPass" className="infoInput" type="password" name="password" onChange={handleChange} />
+    <label className="infoLabel">CONFIRM PASSWORD</label>
+    <input id="signupConfirmPass" className="infoInput" type="password" name="confirmPassword" onChange={handleChangeTwo} />
+    <input id="submitCreate" type="submit" className="formClick" value="SIGN UP" />
+    <button id="goBackLoginBtn" type="button" className="formClick"><Link to="/logIn">Go Back To Login</Link></button>
+</form>
+</div> */}
