@@ -6,35 +6,37 @@ import { ThemeProvider } from '@mui/material';
 
 //////////////////////////////// ROUTE LAYOUT /////////////////////////////////////
 
-export default function ProductsRoute({ itemData, cartUpdateCallBackFunction }) {
+export default function ProductsRoute({ itemData}) {
     const { state } = useLocation()
-
     const [filter, setFilter] = useState({
-        category: "None",
+        category: state ? state.category ? state.category.toLowerCase() : 'None' : 'None',
         brand: "None",
     })
 
     let search = null
 
-    console.log(state, state.category)
-
     if (state !== null) {
-        if (state.category !== undefined) {
-            setFilter({ ...filter, category: state.category.toLowerCase()})
-        } else {
+        if (state['search']) {
             search = state['search']
         }
     }
 
     const [sortVal, setSortVal] = useState('0')
 
+    //state for quality of itimes
+    const [qty, setQty] = useState("1")
+
+    function handleChange(e) {
+        setQty(e.target.value)
+    }
+
 
     const contextObj = {
         filter, setFilter,
         sortVal, setSortVal,
         itemData,
-        cartUpdateCallBackFunction,
-        search
+        search,
+        qty, setQty, handleChange
     }
 
     return (

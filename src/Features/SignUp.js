@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default function SignUp() {
 
@@ -106,7 +106,7 @@ let arrayAllUserNames = userNames.map((user) => {
         </div>
         <div className="input-group success">
             <label className="password">Confirm Password</label>
-            <input type="password" name="confirmPassword" id="password"  onChange={handleChange}/>
+            <input type="password" name="confirmPassword" id="password"  onChange={handleChangeTwo}/>
             {/* <span className="msg">Incorrect password</span> */}
         </div>
 

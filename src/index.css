@@ -186,3 +186,19 @@ code {
   cursor: pointer;
 }
 
+.cartIcon {
+  background: var(--brand-color2);
+  border: none;
+  border-radius: 20px;
+  width: 100px;
+  font-family: var(--main-Font);
+  font-weight:500;
+  color: var(--secondary-color3);
+  display: inline-flex;
+  cursor: pointer;
+  transition: all 250ms;
+}
+
+.cartIcon:hover {
+  filter: drop-shadow(0 0 0.25rem var(--brand-color1));
+}

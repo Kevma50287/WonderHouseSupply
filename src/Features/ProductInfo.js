@@ -1,9 +1,11 @@
 import { Grid } from '@mui/material'
 import React, { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useOutletContext, useParams } from 'react-router-dom'
 import { itemURL } from '../App'
+import Cart from '../ProjectImajes/5 links center/Cart.png';
 
-const ProductInfo = () => {
+const ProductInfo = ({cartUpdateCallBackFunction}) => {
+    const {qty, setQty, handleChange } = useOutletContext()
     const navigate = useNavigate()
     const [infoDisplay, setInfoDisplay] = useState('Details')
     const [itemData, setItemData] = useState({
@@ -39,26 +41,6 @@ const ProductInfo = () => {
     }, [])
 
     const { name, image, numberInStock, description, price, specifications, howToUse } = itemData
-    // const destructure = (targetItem) => {
-    //     let newObj = {}
-    //     if (targetItem) {
-    //         const { name, image, numberInStock, description, price, specifications, howToUse } = targetItem
-    //         newObj = {
-    //             name,
-    //             image,
-    //             numberInStock,
-    //             description,
-    //             price,
-    //             specifications,
-    //             howToUse
-    //         }
-    //     }
-    //     return newObj
-    // }
-
-    // const ObjIdValues = destructure(targetItem)
-
-    // console.log(ObjIdValues)
 
 
     return (
@@ -72,7 +54,10 @@ const ProductInfo = () => {
                     <div>{description}</div>
                     <div>{numberInStock} items in stock</div>
                     <h2>${price}</h2>
-
+                    <button onClick={() => cartUpdateCallBackFunction(qty, productId, setQty)} className="cartIcon">
+                        Add to cart<img src={Cart} alt='add to cart' />
+                    </button>
+                    <input type="number" name="Qty" value={qty} step="1" placeholder="0" onChange={handleChange} />
                 </Grid>
             </Grid>
 

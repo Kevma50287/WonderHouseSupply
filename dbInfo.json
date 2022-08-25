@@ -46,8 +46,12 @@
       "userCategory": "admin",
       "Cart": [
         {
-          "id": "4",
-          "numberOfItemsToBuy": "1234"
+          "id": "9",
+          "numberOfItemsToBuy": "5"
+        },
+        {
+          "id": "7",
+          "numberOfItemsToBuy": "34"
         }
       ],
       "id": 3
