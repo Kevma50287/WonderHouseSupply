@@ -1,20 +1,44 @@
+:root {
+  --brand-color1: #a94747;
+  --brand-color2: #dbd4bf;
+  --secondary-color1: #eae9e9;
+  --secondary-color2: #f5f5f5;
+  --secondary-color3: #142429;
+  --highlight: #da3737;
+  --main-Font: 'Lexend', sans-serif;
+}
+
 .header {
     position: fixed;
     top: 0px;
     left: 0px;
-    background: var(--secondary-color1);
+    background: white;
     width: 100vw;
     opacity: 100;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
+    padding-top: 5px;
+}
+
+#breakline {
+  position: fixed;
+  width: 100vw;
+  height: 1px;
+  border-radius: 5px;
+  background-color: var(--secondary-color3);
+  left:0;
+  top: 57px;
 }
 
 .header-route {
     margin-right: 20px;
     color: #373F41;
-    font-family: 'Mulish';
+    text-decoration: none;
+}
 
+.header-route:hover {
+  font-weight: 600;
 }
 
 .header-routes {
@@ -29,16 +53,18 @@
     justify-content: space-between;
     align-items: center;
     width: 200px;
-    margin-right: 30px
+    margin-right: 30px;
+    transition: all 250ms
 }
 
 .header-button:hover {
     cursor: pointer;
+    filter: drop-shadow(0 0 0.5rem var(--secondary-color3));
+    transition: all 333ms
 }
 
 .wonderLogo {
     color: #A94747;
-    font-family: 'Mulish';
     margin: auto 25px;
 
 }
@@ -54,6 +80,7 @@
     font-weight: bold;
     z-index: 2;
 }
+
 
 
 .loginContainer,
@@ -82,11 +109,9 @@
 .title {
     text-align: center;
     font-size: 25px;
-    font-family: "Poppins"
 }
 
 .infoLabel {
-    font-family: "Poppins";
     font-size: 14px;
     font-weight: bold;
     color: rgba(31, 30, 30, 0.668);
@@ -108,7 +133,6 @@
 .formClick {
     background-color: rgba(31, 30, 30, 0.668);
     color: white;
-    font-family: "Poppins";
     font-size: 14px;
     border-radius: 4px;
     margin-top: 10px;

@@ -18,7 +18,6 @@ const Filter = ({ setFilter, filter, uniqueCategories, uniqueBrands }) => {
     setFilter({ ...filter, ...newObjValue })
   }
 
-  console.log(filter)
 
   const brandItems = uniqueBrands.map(item => {
     return (

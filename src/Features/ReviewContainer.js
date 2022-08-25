@@ -14,23 +14,21 @@ const ReviewContainer = () => {
 
     const arrayItems = reviewData.map((item) => {
         return (
-            <Grid key={nanoid()} item xs={12} sm={6} md={4}>
-                <div className="review">
+                <div key={nanoid()} className="review">
                     <div>{item.rating}</div>
                     <p>{item.review}</p>
                     <p>{item.username}</p>
                 </div>
-            </Grid>
         )
     })
 
     return (
-        <div className="margin10">
+        <div id="ReviewContainer">
             <Grid container rowSpacing={2} className="margin0">
                 <Grid container item className='center' >
                     <Grid item className='main-section-title'>Customer Reviews</Grid>
                 </Grid>
-                <Grid container item columnSpacing={1}>
+                <Grid item id="InnerReviewContainer">
                     {arrayItems}
                 </Grid>
             </Grid>

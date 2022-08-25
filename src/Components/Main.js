@@ -22,6 +22,8 @@ export default function Main({itemData}) {
             <ThemeProvider theme={theme}>
                 <CategoryContainer />
                 <PopProdContainer itemData={itemData} />
+                <br/>
+                <br/>
                 <ReviewContainer />
             </ThemeProvider>
         </div>
