@@ -167,7 +167,7 @@ function App() {
 
 
   return (
-    <div>
+    <div id="AppContainer">
       <ThemeProvider theme={theme}>
         <Header />
 

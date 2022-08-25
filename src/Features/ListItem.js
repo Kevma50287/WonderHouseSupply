@@ -19,7 +19,7 @@ export default function ListItem({ item, cartUpdateCallBackFunction }) {
       <p className='itemname'>{name}</p>
       <p className='itemprice'>${price}</p>
       <p className='itemstock'>{numberInStock} Items in stock</p>
-      <p className='itemdetail'>{description}</p>
+      {/* <p className='itemdetail'>{description}</p> */}
       <button className='button-style' onClick={() => navigate(`/products/${id}`)}>
         Learn More
       </button>
