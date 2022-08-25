@@ -38,6 +38,7 @@ export default function Header() {
   }
 
   return (
+    <>
     <div className='header'>
       <Link to="/" className="header-route">
         <img className="header-route wonderLogo" src={GroupLogo} alt="group logo" />
@@ -96,7 +97,8 @@ export default function Header() {
         </Link>
       </div>
     </div>
-
+    <div id="breakline"></div>
+    </>
 
   )
 }

@@ -14,11 +14,23 @@ import React, { useEffect, useState } from 'react';
 import ItemPage from './Features/ItemPage/ItemPage';
 import ProductInfo from './Features/ProductInfo';
 import NotFound from './Features/NotFound';
+import { createTheme, ThemeProvider } from '@mui/material';
 
 const itemURL = 'http://localhost:3001/items'
 const userURL = 'http://localhost:3002/users'
 const reviewsURL = 'http://localhost:3003/reviews'
 
+const theme = createTheme({
+  breakpoints: {
+      values: {
+          xs: 0,
+          sm: 600,
+          md: 1080,
+          lg: 1250,
+          xl: 1536
+      }
+  }
+})
 
 function App() {
 
@@ -31,8 +43,8 @@ function App() {
 
 
 
-  
-  function cartChangeNumberOfItemsCallBackFunction(qtyCart,id,setQtyCart){
+
+  function cartChangeNumberOfItemsCallBackFunction(qtyCart, id, setQtyCart) {
 
     let qtyy = qtyCart
     setQtyCart(qtyy)
@@ -104,10 +116,10 @@ function App() {
     if (newUserCartTwo.length === 0) {
       newUserCart = [...userData.Cart, { id: `${id}`, numberOfItemsToBuy: qty }]
     } else { console.log("wow") }
-  
 
-      
-    
+
+
+
 
 
 
@@ -121,8 +133,8 @@ function App() {
       Object.keys(userData).map((key) => {
         if (key === "Cart") {
           userData[key] = newUserCart
-        } else { 
-          userData[key] = userData[key] 
+        } else {
+          userData[key] = userData[key]
         }
       })
       return (userData)
@@ -156,27 +168,29 @@ function App() {
 
   return (
     <div>
-      <Header />
+      <ThemeProvider theme={theme}>
+        <Header />
 
-      <Routes>
-        <Route path="/" element={<Main itemData={itemData} />} />
-        <Route path="/about" element={<AboutRoute />} />
-        <Route path="/cart" element={<Cart userData={userData} itemData={itemData} cartDeleteCallBackFunction={cartDeleteCallBackFunction} cartChangeNumberOfItemsCallBackFunction={cartChangeNumberOfItemsCallBackFunction} />} />
-        <Route path="/logIn" element={<LogIn setUserData={setUserData} setLogedIn={setLogedIn} />} />
-        <Route path="/products" element={
-          <ProductsRoute
-            itemData={itemData}
-          />
-        }>
-          <Route index element={<ItemPage />} />
-          <Route path=":productId" element={<ProductInfo cartUpdateCallBackFunction={cartUpdateCallBackFunction} />} />
-        </Route>
-        <Route path="/services" element={<ServicesRoute />} />
-        <Route path="/signUp" element={<SignUp />} />
-        <Route path="/*" element={<NotFound />} />
-      </Routes>
-      <Footer />
-      <AdminForm />
+        <Routes>
+          <Route path="/" element={<Main itemData={itemData} />} />
+          <Route path="/about" element={<AboutRoute />} />
+          <Route path="/cart" element={<Cart userData={userData} itemData={itemData} cartDeleteCallBackFunction={cartDeleteCallBackFunction} cartChangeNumberOfItemsCallBackFunction={cartChangeNumberOfItemsCallBackFunction} />} />
+          <Route path="/logIn" element={<LogIn setUserData={setUserData} setLogedIn={setLogedIn} />} />
+          <Route path="/products" element={
+            <ProductsRoute
+              itemData={itemData}
+            />
+          }>
+            <Route index element={<ItemPage />} />
+            <Route path=":productId" element={<ProductInfo cartUpdateCallBackFunction={cartUpdateCallBackFunction} />} />
+          </Route>
+          <Route path="/services" element={<ServicesRoute />} />
+          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+        <AdminForm />
+      </ThemeProvider>
     </div>
   );
 }
