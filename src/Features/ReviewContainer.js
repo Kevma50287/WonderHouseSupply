@@ -18,7 +18,7 @@ const ReviewContainer = () => {
     const arrayItems = reviewData.map((item) => {
         let totalStars = []
         for (let index = 0; index < parseInt(item.rating); index++) {
-            totalStars.push(<Star sx={{color: yellow[700]}} />)   
+            totalStars.push(<Star key={nanoid()} sx={{ color: yellow[700] }} />)
         }
 
         return (

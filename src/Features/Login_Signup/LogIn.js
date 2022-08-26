@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { userURL } from '../App';
+import { userURL } from '../../App';
 
 export default function LogIn({ setUserData, setLogedIn }) {
     //state for user data 

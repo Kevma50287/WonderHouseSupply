@@ -6,7 +6,7 @@ import Filter from './Filter'
 import CategoryData from '../../Components/CategoryData'
 import Sort from './Sort'
 import { useOutletContext } from 'react-router-dom'
-import PaginationRounded from '../Pagination'
+import PaginationRounded from './Pagination'
 
 //Component
 const ItemPage = () => {
