@@ -1,11 +1,12 @@
 import { Grid } from '@mui/material'
 import { nanoid } from '@reduxjs/toolkit'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ListItem from '../ListItem'
 import Filter from './Filter'
 import CategoryData from '../../Components/CategoryData'
 import Sort from './Sort'
 import { useOutletContext } from 'react-router-dom'
+import PaginationRounded from './Pagination'
 
 //Component
 const ItemPage = () => {
@@ -89,6 +90,13 @@ const ItemPage = () => {
 
   const { sortVal, filter, itemData, cartUpdateCallBackFunction, setSortVal, setFilter, search } = useOutletContext()
 
+  const [currPage, setCurrPage] = useState(1)
+
+   //When filters are applied, reset to first page
+   useEffect(() => {
+    setCurrPage(1)
+  }, [sortVal, filter, search])
+
   const uniqueBrands = getUnique(itemData, 'brand')
 
   const uniqueCategories = getUnique(CategoryData, 'category').map((item) => item.toLowerCase())
@@ -99,7 +107,28 @@ const ItemPage = () => {
 
   const sortedItems = sortArr(filteredItems)
 
-  const arrayItems = sortedItems.map((item) => {
+  //Pagination params
+  const numItems = sortedItems.length
+  const totalPages = Math.ceil(numItems / 6)
+
+  //Pagination function
+  const getCurrPageItems = (array, page, numItems) => {
+    let newArr = []
+    for (let i = ((page * 6) - 6); i < page * 6 && i < numItems; i++) {
+      const element = array[i];
+      if (element !== undefined) {
+        newArr.push(element)
+      } else {
+        return newArr
+      }
+    }
+    return newArr
+  }
+
+  const currPageItems = getCurrPageItems(sortedItems, currPage, numItems)
+
+  //Get Array of Components
+  const arrayItems = currPageItems.map((item) => {
     return (
       <Grid
         key={nanoid()}
@@ -111,6 +140,7 @@ const ItemPage = () => {
       </Grid>
     )
   })
+
 
   return (
     <>
@@ -130,12 +160,13 @@ const ItemPage = () => {
         <Grid
           item container
           xs={9} sm={9} md={9}
-          columnSpacing={2} rowSpacing={2}
+          columnSpacing={3} rowSpacing={3}
           className="margin10"
         >
           {arrayItems}
         </Grid>
       </Grid>
+      <PaginationRounded handleChange={setCurrPage} currPage={currPage} totalPages={totalPages} />
     </>
   )
 }

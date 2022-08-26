@@ -4,8 +4,8 @@ import { useNavigate, useOutletContext, useParams } from 'react-router-dom'
 import { itemURL } from '../App'
 import Cart from '../ProjectImajes/5 links center/Cart.png';
 
-const ProductInfo = ({cartUpdateCallBackFunction}) => {
-    const {qty, setQty, handleChange } = useOutletContext()
+const ProductInfo = ({ cartUpdateCallBackFunction }) => {
+    const { qty, setQty, handleChange } = useOutletContext()
     const navigate = useNavigate()
     const [infoDisplay, setInfoDisplay] = useState('Details')
     const [itemData, setItemData] = useState({
@@ -42,7 +42,6 @@ const ProductInfo = ({cartUpdateCallBackFunction}) => {
 
     const { name, image, numberInStock, description, price, specifications, howToUse } = itemData
 
-
     return (
         <>
             <Grid container  >
@@ -52,13 +51,19 @@ const ProductInfo = ({cartUpdateCallBackFunction}) => {
                 <Grid item xs={12} sm={4} md={4} lg={6} className="flex" id="BasicProductBox">
                     <h1>{name}</h1>
                     <div>{description}</div>
-                    <br/>
+                    <br />
                     <div>{numberInStock} items in stock</div>
                     <h2>${price}</h2>
-                    <button onClick={() => cartUpdateCallBackFunction(qty, productId, setQty)} className="cartIcon">
-                        Add to cart<img src={Cart} alt='add to cart' />
+                    <button
+                        onClick={() => {
+                            cartUpdateCallBackFunction(qty, productId, setQty)
+                        }}
+                        className="cartIcon"
+                    >
+                        Add to cart
+                        <img src={Cart} alt='add to cart' />
                     </button>
-                    <br/>
+                    <br />
                     <input type="number" name="Qty" value={qty} step="1" placeholder="0" onChange={(e) => handleChange(e, numberInStock)} id='quantitySelector' />
                 </Grid>
             </Grid>
