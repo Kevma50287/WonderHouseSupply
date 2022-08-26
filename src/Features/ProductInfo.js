@@ -45,6 +45,7 @@ const ProductInfo = ({ cartUpdateCallBackFunction }) => {
     return (
         <>
             <Grid container  >
+               
                 <Grid item xs={12} sm={8} md={8} lg={6} className="flex">
                     <img src={image} alt="item" className='center-image' id='productInfoImage' />
                 </Grid>

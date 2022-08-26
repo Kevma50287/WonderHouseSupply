@@ -145,6 +145,18 @@ const ItemPage = () => {
     <>
       <Sort sortVal={sortVal} setSortVal={setSortVal} />
       <Grid container columnSpacing={1}  >
+        <Grid container className='box-shadow margin10'>
+              
+              <Grid item xs={12} sm={12} >
+                  <div className='not-full-screen-container-two'>
+                      <div className='flex flex-column bannerText'>
+                          <h1 className='center font-highlight-color'>All Products</h1>
+                          {/* <p className='center font-highlight-color'> Call Us: 718-xxx-xxx</p> */}
+                      </div>
+                  </div>
+              </Grid>
+          
+          </Grid>
         <Grid
           item container
           xs={3} sm={3} md={3}

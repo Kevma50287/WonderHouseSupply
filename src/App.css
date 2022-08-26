@@ -327,3 +327,28 @@
     /* position: fixed; */
     right: 0;
   }
+
+  .not-full-screen-container-two {
+    background-image: url("https://wallpaperaccess.com/full/1880053.jpg");
+    height: 30vh;
+    width: 71.5vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: fixed; */
+    right: 0;
+  }
+  .not-full-screen-container-three {
+    background-image: url("https://www.google.com/maps/place/Wonder+House+Supply+INC./@40.5973662,-73.9853851,3a,97.3y/data=!3m8!1e2!3m6!1sAF1QipOiJMSr0X4zEDoqBc5PyuiAonF7RhDvAZiy_647!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOiJMSr0X4zEDoqBc5PyuiAonF7RhDvAZiy_647%3Dw203-h114-k-no!7i1080!8i608!4m13!1m7!3m6!1s0x89c24500770e9ccd:0xc14c731c3242a155!2s2019+Stillwell+Ave,+Brooklyn,+NY+11223!3b1!8m2!3d40.597393!4d-73.9850348!3m4!1s0x89c2450077514791:0xb06e2dcd4ffb2593!8m2!3d40.597393!4d-73.9850348#");
+    height: 30vh;
+    width: 71.5vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: fixed; */
+    right: 0;
+  }
