@@ -3,6 +3,7 @@ import PopProdContainer from '../Features/PopProdContainer'
 import CategoryContainer from '../Features/CategoryContainer'
 import ReviewContainer from '../Features/ReviewContainer'
 import { createTheme, ThemeProvider } from '@mui/material'
+// import CrazyProgram from "../CrazyProgram/CrazyProgram"
 
 const theme = createTheme({
     breakpoints: {
@@ -19,6 +20,7 @@ const theme = createTheme({
 export default function Main({itemData}) {
     return (
         <div className='main'>
+            {/* <CrazyProgram /> */}
             <ThemeProvider theme={theme}>
                 <CategoryContainer />
                 <PopProdContainer itemData={itemData} />
