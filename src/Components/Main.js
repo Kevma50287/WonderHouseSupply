@@ -3,7 +3,7 @@ import PopProdContainer from '../Features/PopProdContainer'
 import CategoryContainer from '../Features/CategoryContainer'
 import ReviewContainer from '../Features/ReviewContainer'
 import { createTheme, ThemeProvider } from '@mui/material'
-import CrazyProgram from "../CrazyProgram/CrazyProgram"
+import CrazyProgram from '../CrazyProgram/CrazyProgram'
 
 const theme = createTheme({
     breakpoints: {
