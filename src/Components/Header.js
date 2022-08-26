@@ -46,13 +46,10 @@ export default function Header( {userData}) {
 let administratorForm = userData.userCategory === "admin" ? (
   <Link to="/addNewTool">
   <button className="header-button">
-    !
+    Admin Form
   </button>
   </Link>
 ) : "";
-
-
-
 
   return (
     <>

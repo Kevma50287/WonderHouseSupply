@@ -67,20 +67,3 @@ const CrazyProgram = () => {
 
 export default CrazyProgram
 
-
-
-// <section className="u-align-center u-clearfix u-white u-section-1" id="sec-77fa">
-// <img className="mage39.png" alt="" data-image-width="456" data-image-height="304" data-animation-name="" data-animation-duration="0" data-animation-direction="">
-// <img className="rc="images/image36.png" alt="" data-image-width="424" data-image-height="635">
-// <h1 className="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-custom-color-1 u-text-default u-text-1"> Find the Perfect Solution for yo​ur&nbsp;<br>Ho​me Repairs
-// </h1>
-// <p className="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-custom-color-2 u-text-2"> At Wonder House Supply Inc. we offer experienced advice and recommendations for any common home repairs that you may have.</p>
-// <a href="#" className="u-btn u-btn-rectangle u-button-style u-color-scheme-summer-time u-color-style-multicolor-1 u-custom-color-3 u-radius-0 u-btn-1"> Explore Products</a>
-// <img className="" src="images/Frame.png" alt="" data-image-width="257" data-image-height="58">
-// <img className="roportions u-image-4" src="images/Vector.png" alt="" data-image-width="92" data-image-height="92">
-// <img className="" src="images/image33.png" alt="" data-image-width="112" data-image-height="102">
-// <img className="" src="images/g48032.png" alt="" data-image-width="198" data-image-height="31">
-// <img className="roportions u-image-7" src="images/Frame1.png" alt="" data-image-width="201" data-image-height="49">
-// <img className="" src="images/Page1.png" alt="" data-image-width="100" data-image-height="54">
-// <img className="" src="images/Frame2.png" alt="" data-image-width="200" data-image-height="44">
-// </section>
