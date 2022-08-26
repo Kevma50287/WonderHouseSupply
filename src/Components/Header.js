@@ -18,7 +18,7 @@ const style = {
   color:'#ffffff',
 };
 
-export default function Header() {
+export default function Header( {userData}) {
   const [searchText, setSearchText] = useState("")
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -37,6 +37,22 @@ export default function Header() {
   const handleInput = (e) => {
     setSearchText(e.target.value)
   }
+
+
+//administrator form
+
+
+
+let administratorForm = userData.userCategory === "admin" ? (
+  <Link to="/addNewTool">
+  <button className="header-button">
+    !
+  </button>
+  </Link>
+) : "";
+
+
+
 
   return (
     <>
@@ -96,6 +112,7 @@ export default function Header() {
             Sign Up
           </button>
         </Link>
+        {administratorForm}
       </div>
     </div>
     <div id="breakline"></div>

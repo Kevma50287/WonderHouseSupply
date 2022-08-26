@@ -163,7 +163,7 @@ function App() {
   return (
     <div id="AppContainer">
       <ThemeProvider theme={theme}>
-        <Header />
+        <Header userData={userData}/>
 
         <Routes>
           <Route path="/" element={<Main itemData={itemData} />} />
@@ -180,10 +180,10 @@ function App() {
           </Route>
           <Route path="/services" element={<ServicesRoute />} />
           <Route path="/signUp" element={<SignUp />} />
+          <Route path="/addNewTool" element={<AdminForm />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
         <Footer />
-        <AdminForm />
       </ThemeProvider>
     </div>
   );
