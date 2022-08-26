@@ -42,9 +42,6 @@ function App() {
   const [userData, setUserData] = useState({ Cart: [] })
 
 
-
-
-
   function cartChangeNumberOfItemsCallBackFunction(qtyCart, id, setQtyCart) {
 
     let qtyy = qtyCart
@@ -59,8 +56,6 @@ function App() {
     newUserDataUpdate.Cart = newUserCart
 
     setUserData(newUserDataUpdate)
-
-    console.log(userData)
 
     if (logedIn === `${true}`) {
       fetch(`http://localhost:3002/users/${userData.id}`, {
@@ -110,19 +105,13 @@ function App() {
     })
     // if (newUserCart === userData.Cart) {
     let newUserCartTwo = newUserCart.filter((item) => {
-      if (item.id == `${id}`) { return item } else { }
+      if (item.id === `${id}`) { return item } else { }
     })
 
 
     if (newUserCartTwo.length === 0) {
       newUserCart = [...userData.Cart, { id: `${id}`, numberOfItemsToBuy: qty }]
     } else { console.log("wow") }
-
-
-
-
-
-
 
 
     if (newUserCartTwo.length === 0) {

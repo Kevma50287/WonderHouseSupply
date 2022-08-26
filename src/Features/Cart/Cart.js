@@ -12,14 +12,16 @@ export default function Cart({ userData, itemData, cartDeleteCallBackFunction, c
 
   let cartItems = itemData.filter((item) => {
     if (newArrayOfIds.includes(`${item.id}`)) {
-     let myObj = Cart.find(el => el.id === `${item.id}`) 
-     let numberOfItemsToBuy = myObj.numberOfItemsToBuy
-     item.numberOfItemsToBuy = numberOfItemsToBuy
+      let myObj = Cart.find(el => el.id === `${item.id}`)
+      let numberOfItemsToBuy = myObj.numberOfItemsToBuy
+      item.numberOfItemsToBuy = numberOfItemsToBuy
       return item
-    } else { 
+    } else {
       return false
-    } 
+    }
   })
+
+  console.log(cartItems)
 
   const itemRows = cartItems.map((itemInCart) => {
     return (
@@ -54,6 +56,10 @@ export default function Cart({ userData, itemData, cartDeleteCallBackFunction, c
           </TableBody>
         </Table>
       </TableContainer>
+      <div id='checkoutContainer' className='box-shadow'>
+
+        <button className='button-style'>Checkout</button>
+      </div>
     </div>
   )
 }

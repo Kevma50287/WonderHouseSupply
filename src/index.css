@@ -47,10 +47,11 @@ code {
 .center {
   text-align: center;
   align-items: center;
+  align-content: center;
   justify-content: center;
+  justify-items: center;
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0px auto;
 }
 
 .center-horizontal {
@@ -144,6 +145,10 @@ code {
 
 .flex {
   display: flex;
+}
+
+.flex-column {
+  flex-flow: column nowrap;
 }
 
 #BasicProductBox {
@@ -290,4 +295,42 @@ code {
   width: 70%;
   height: 37px;
   margin-right:5px
+}
+
+.font-main-color {
+  color: var(--brand-color1)
+}
+
+.font-highlight-color {
+  color: var(--highlight)
+}
+
+#image39 {
+  width: 100%;
+  height:300px;
+  margin-top: 335px;
+}
+
+.bannerText {
+  height: 100%;
+  justify-content: center;
+  justify-items: center;
+}
+
+.bannerImage{
+  height: auto;
+  width:auto
+}
+
+.justify{
+  justify-content: center;
+  justify-items: center;
+}
+
+.box-shadow {
+  box-shadow: 0 2px 6px var(--brand-color2);
+}
+
+#bannerIcons {
+  margin: 20px auto 100px auto
 }

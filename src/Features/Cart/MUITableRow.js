@@ -5,6 +5,9 @@ const MUITableRow = ({ itemInCart, cartDeleteCallBackFunction, cartChangeNumberO
 
     const { name, price, numberOfItemsToBuy, image, description, id } = itemInCart
 
+    const totalPerItem = numberOfItemsToBuy * price
+    const totalPerItemFixed2 = totalPerItem.toFixed(2)
+
     const [qtyCart, setQtyCart] = useState(numberOfItemsToBuy)
 
     function handleChangeTheNumber(e) {
@@ -35,7 +38,7 @@ const MUITableRow = ({ itemInCart, cartDeleteCallBackFunction, cartChangeNumberO
                 </form>
 
             </TableCell>
-            <TableCell align="left">{numberOfItemsToBuy * price}</TableCell>
+            <TableCell align="left"> ${totalPerItemFixed2}</TableCell>
             <TableCell align="left">
                 <button onClick={() => cartDeleteCallBackFunction(id)} className="header-button">
                     Delete

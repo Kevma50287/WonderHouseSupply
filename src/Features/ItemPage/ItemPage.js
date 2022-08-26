@@ -141,7 +141,6 @@ const ItemPage = () => {
     )
   })
 
-
   return (
     <>
       <Sort sortVal={sortVal} setSortVal={setSortVal} />
