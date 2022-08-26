@@ -23,13 +23,13 @@ const reviewsURL = 'http://localhost:3003/reviews'
 
 const theme = createTheme({
   breakpoints: {
-      values: {
-          xs: 0,
-          sm: 600,
-          md: 1080,
-          lg: 1250,
-          xl: 1536
-      }
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 1080,
+      lg: 1250,
+      xl: 1536
+    }
   }
 })
 
@@ -40,6 +40,10 @@ function App() {
 
   // data of our user
   const [userData, setUserData] = useState({ Cart: [] })
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
 
   function cartChangeNumberOfItemsCallBackFunction(qtyCart, id, setQtyCart) {

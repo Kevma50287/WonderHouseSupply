@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 const MUITableRow = ({ itemInCart, cartDeleteCallBackFunction, cartChangeNumberOfItemsCallBackFunction }) => {
 
-    const { name, price, numberOfItemsToBuy, image, description, id } = itemInCart
+    const { name, price, numberOfItemsToBuy, image, description, id, numberInStock } = itemInCart
 
     const totalPerItem = numberOfItemsToBuy * price
     const totalPerItemFixed2 = totalPerItem.toFixed(2)
@@ -11,9 +11,8 @@ const MUITableRow = ({ itemInCart, cartDeleteCallBackFunction, cartChangeNumberO
     const [qtyCart, setQtyCart] = useState(numberOfItemsToBuy)
 
     function handleChangeTheNumber(e) {
-        setQtyCart(e.target.value)
+        if (e.target.value > -1 && e.target.value < numberInStock) { setQtyCart(e.target.value) }
     }
-
 
     return (
         <TableRow

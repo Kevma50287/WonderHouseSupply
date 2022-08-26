@@ -18,10 +18,10 @@ const CrazyProgram = () => {
     <div className="kevinHelps">
       <section >
         <Grid container className='box-shadow margin10'>
-          <Grid item sm={4} >
-            <img src={image36} alt="" data-image-width="424" data-image-height="635"></img>
+          <Grid item xs={12} sm={4} >
+            <img id= 'image36' src={image36} alt="" data-image-width="424" data-image-height="635"></img>
           </Grid>
-          <Grid item sm={4} >
+          <Grid item xs={12} sm={4} >
             <div className='flex flex-column bannerText'>
               <h1 className='center font-highlight-color'> Find the Perfect Solution for your Home Repairs</h1>
               <p> At Wonder House Supply Inc. we offer experienced advice and recommendations for any common home repairs that you may have.</p>
@@ -32,7 +32,7 @@ const CrazyProgram = () => {
               </Link>
             </div>
           </Grid>
-          <Grid item sm={4} className='flex flex-column'>
+          <Grid item xs={12} sm={4} className='flex flex-column'>
             <img id='image39' src={image39} alt="banner 2"></img>
           </Grid>
         </Grid>
@@ -50,13 +50,13 @@ const CrazyProgram = () => {
           <Grid item sm={3}>
             <img className="center bannerImage" src={g48032} alt="" data-image-width="198" data-image-height="31"></img>
           </Grid>
-          <Grid item sm={4}>
+          <Grid item  sm={4}>
             <img className="center bannerImage" src={Frame1} alt="" data-image-width="201" data-image-height="49"></img>
           </Grid>
-          <Grid item sm={4}>
+          <Grid item  sm={4}>
             <img className="center bannerImage" src={Page1} alt="" data-image-width="100" data-image-height="54"></img>
           </Grid>
-          <Grid item sm={4}>
+          <Grid item  sm={4}>
             <img className="center bannerImage" src={Frame2} alt="" data-image-width="200" data-image-height="44"></img>
           </Grid>
         </Grid>
