@@ -169,7 +169,7 @@
   
   
   .full-screen-container {
-    background-image: url("https://images5.alphacoders.com/122/1227893.jpg");
+    background-image: url(".");
     height: 100vh;
     width: 100vw;
     background-size: cover;
@@ -309,4 +309,19 @@
 
   #PageBar {
     margin: 30px auto 0px auto;
+  }
+
+
+
+  .not-full-screen-container {
+    background-image: url("https://c8.alamy.com/comp/2BRH5MW/top-view-set-of-tools-and-cabinetry-accessories-placed-on-natural-pine-wood-board-leaving-free-space-for-text-in-the-middle-work-and-diy-concept-2BRH5MW.jpg");
+    height: 30vh;
+    width: 71.5vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: fixed; */
+    right: 0;
   }

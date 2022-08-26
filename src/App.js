@@ -6,7 +6,7 @@ import AdminForm from './Features/AdminForm';
 import { Route, Routes } from 'react-router-dom';
 import AboutRoute from './Features/AboutRoute';
 import ProductsRoute from './Features/ProductsRoute';
-import ServicesRoute from './Features/ServicesRoute';
+import ServicesRoute from './Features/ServicesRoute/ServicesRoute';
 import Cart from './Features/Cart/Cart';
 import LogIn from './Features/Login_Signup/LogIn';
 import SignUp from './Features/Login_Signup/SignUp';
