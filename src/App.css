@@ -62,9 +62,8 @@
 
 .header-buttons {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 200px;
+    width: auto;
     margin-right: 30px;
     transition: all 250ms
 }
@@ -92,9 +91,12 @@
     font-weight: bold;
     z-index: 2;
     text-align: center;
+    margin-right: 10px;
 }
 
-
+.header-buttons:last-child {
+  margin-right: 0px
+}
 
 .loginContainer,
 .signupContainer {
