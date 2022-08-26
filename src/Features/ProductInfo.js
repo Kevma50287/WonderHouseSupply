@@ -57,6 +57,7 @@ const ProductInfo = ({ cartUpdateCallBackFunction }) => {
                     <button
                         onClick={() => {
                             cartUpdateCallBackFunction(qty, productId, setQty)
+                            alert('Added to Cart!')
                         }}
                         className="cartIcon"
                     >

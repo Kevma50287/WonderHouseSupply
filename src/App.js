@@ -14,6 +14,7 @@ import React, { useEffect, useState } from 'react';
 import ItemPage from './Features/ItemPage/ItemPage';
 import ProductInfo from './Features/ProductInfo';
 import NotFound from './Features/NotFound';
+import ConfirmationPage from './Features/ConfirmationPage';
 import { createTheme, ThemeProvider } from '@mui/material';
 
 
@@ -168,7 +169,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Main itemData={itemData} />} />
           <Route path="/about" element={<AboutRoute />} />
-          <Route path="/cart" element={<Cart userData={userData} itemData={itemData} cartDeleteCallBackFunction={cartDeleteCallBackFunction} cartChangeNumberOfItemsCallBackFunction={cartChangeNumberOfItemsCallBackFunction} />} />
+          <Route path="/cart" element={<Cart userData={userData} itemData={itemData} cartDeleteCallBackFunction={cartDeleteCallBackFunction} cartChangeNumberOfItemsCallBackFunction={cartChangeNumberOfItemsCallBackFunction} />} >
+            <Route path='confirmation' element={<ConfirmationPage />} />
+          </Route>
           <Route path="/logIn" element={<LogIn setUserData={setUserData} setLogedIn={setLogedIn} />} />
           <Route path="/products" element={
             <ProductsRoute

@@ -17,22 +17,25 @@ const theme = createTheme({
     }
 })
 
-export default function Main({itemData}) {
+export default function Main({ itemData }) {
     return (
         <div className='main'>
             <CrazyProgram />
+            <br />
             <ThemeProvider theme={theme}>
                 <CategoryContainer />
+                <br />
+                <br />
                 <PopProdContainer itemData={itemData} />
-                <br/>
-                <br/>
+                <br />
+                <br />
                 <ReviewContainer />
             </ThemeProvider>
         </div>
     )
 }
 
-export {theme}
+export { theme }
 
 
 
