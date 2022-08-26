@@ -49,24 +49,61 @@ function AdminForm() {
 
 
     return (
-        <div>
-        <h2>New Tool</h2>
-        <form onSubmit={handleSubmit} >
-          <input type="text" name="name"  value={newTool.name} placeholder="Tool name" onChange={handleChange}/>
-          <input type="text" name="placeText"  value={newTool.placeText} placeholder="Place text" onChange={handleChange}/>
-          <input type="text" name="image"  value={newTool.image} placeholder="Image URL" onChange={handleChange}/>
-          <input type="number" name="price"  value={newTool.price} step="0.01" placeholder="Price" onChange={handleChange}/>
-          <input type="number" name="numberInStock"  value={newTool.numberInStock} step="1" placeholder="Number in stock" onChange={handleChange}/>
-          <input type="text" name="description"  value={newTool.description} placeholder="Description" onChange={handleChange}/>
-          <input type="text" name="specifications"  value={newTool.specifications} placeholder="Specifications" onChange={handleChange}/>
-          <input type="text" name="howToUse"  value={newTool.howToUse} placeholder="How to use" onChange={handleChange}/>
-          <input type="text" name="category"  value={newTool.category} placeholder="Category" onChange={handleChange}/>
-          <input type="text" name="finish"  value={newTool.finish} placeholder="Finish" onChange={handleChange}/>
-          <input type="text" name="relatedCategory"  value={newTool.relatedCategory} placeholder="Related category" onChange={handleChange}/>
-          <input type="text" name="type"  value={newTool.type} placeholder="Type" onChange={handleChange}/>
-          <input type="text" name="brand"  value={newTool.brand} placeholder="Brand" onChange={handleChange}/>
-          <button type="submit">Add Tool</button>
-        </form>
+      <div className="full-screen-container">
+          <div className="login-container">
+          <h1 className="login-title">New Tool</h1>
+            <form onSubmit={handleSubmit} >
+                    <div className="input-group success">
+                        <label className="username">Tool name</label>
+                        <input type="text" name="name"  value={newTool.name} placeholder="Tool name" onChange={handleChange}/>
+                    </div>
+                    <div className="input-group success">
+                        <label className="username">Place text</label>
+                        <input type="text" name="placeText"  value={newTool.placeText} placeholder="Place text" onChange={handleChange}/>
+                    </div>
+                    <div className="input-group success">
+                        <label className="username">Image URL</label>
+                        <input type="text" name="image"  value={newTool.image} placeholder="Image URL" onChange={handleChange}/>
+                    </div>
+                    <div className="input-group success">
+                        <label className="username">Price</label>
+                        <input type="number" name="price"  value={newTool.price} step="0.01" placeholder="Price" onChange={handleChange}/>
+                    </div>
+                    <div className="input-group success">
+                        <label className="username">Number in stock</label>
+                        <input type="number" name="numberInStock"  value={newTool.numberInStock} step="1" placeholder="Number in stock" onChange={handleChange}/>
+                    </div>
+                    <div className="input-group success">
+                        <label className="username">Description</label>
+                        <input type="text" name="description"  value={newTool.description} placeholder="Description" onChange={handleChange}/>
+                    </div>
+                    <div className="input-group success">
+                        <label className="username">Specifications</label>
+                        <input type="text" name="specifications"  value={newTool.specifications} placeholder="Specifications" onChange={handleChange}/>
+                    </div>
+                    <div className="input-group success">
+                        <label className="username">How to use</label>
+                        <input type="text" name="howToUse"  value={newTool.howToUse} placeholder="How to use" onChange={handleChange}/>
+                    </div>
+                    <div className="input-group success">
+                        <label className="username">Category</label>
+                        <input type="text" name="category"  value={newTool.category} placeholder="Category" onChange={handleChange}/>
+                    </div>
+                    <div className="input-group success">
+                        <label className="username">Related category</label>
+                        <input type="text" name="relatedCategory"  value={newTool.relatedCategory} placeholder="Related category" onChange={handleChange}/>
+                    </div>
+                    <div className="input-group success">
+                        <label className="username">Type</label>
+                        <input type="text" name="type"  value={newTool.type} placeholder="Type" onChange={handleChange}/>
+                    </div>
+                    <div className="input-group success">
+                        <label className="username">Brand</label>
+                        <input type="text" name="brand"  value={newTool.brand} placeholder="Brand" onChange={handleChange}/>
+                    </div>
+                    <button type="submit" className="login-button">Add Tool</button>
+            </form>
+        </div>
       </div>
     );
   }
